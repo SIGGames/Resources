@@ -1,20 +1,22 @@
 ## SIG Games Colors
-- **Grey:** <span style="display:inline-block; width:12px; height:12px; background-color:#F1F1F1; border: 1px solid black; border-radius: 50%;"></span> `#F1F2F2`
-- **Violet:** <span style="display:inline-block; width:12px; height:12px; background-color:#684B9F; border: 1px solid black; border-radius: 50%;"></span> `#684B9F`
-- **Black:** <span style="display:inline-block; width:12px; height:12px; background-color:#333132; border: 1px solid black; border-radius: 50%;"></span> `#333132`
-- **White:** <span style="display:inline-block; width:12px; height:12px; background-color:#FFFFFF; border: 1px solid black; border-radius: 50%;"></span> `#FFFFFF`
+- <span style="display:inline-block; width:12px; height:12px; background-color:#F1F1F1; border: 1px solid black; border-radius: 50%;"></span> `#F1F2F2`
+- <span style="display:inline-block; width:12px; height:12px; background-color:#684B9F; border: 1px solid black; border-radius: 50%;"></span> `#684B9F`
+- <span style="display:inline-block; width:12px; height:12px; background-color:#333132; border: 1px solid black; border-radius: 50%;"></span> `#333132`
+- <span style="display:inline-block; width:12px; height:12px; background-color:#FFFFFF; border: 1px solid black; border-radius: 50%;"></span> `#FFFFFF`
 
 
 ## Email Type
-- **Newsletter DevTeam:**
-<span style="display:inline-block; width:12px; height:12px; background-color:#C2CDF0; border: 1px solid black; border-radius: 50%;"></span> `#C2CDF0` 
-<span style="display:inline-block; width:12px; height:12px; background-color:#8298E3; border: 1px solid black; border-radius: 50%;"></span> `#8298E3` 
+### Newsletter DevTeam
+- <span style="display:inline-block; width:12px; height:12px; background-color:#DFE6FF; border: 1px solid black; border-radius: 50%;"></span> `#DFE6FF` 
+- <span style="display:inline-block; width:12px; height:12px; background-color:#C2CDF0; border: 1px solid black; border-radius: 50%;"></span> `#C2CDF0` 
+- <span style="display:inline-block; width:12px; height:12px; background-color:#8298E3; border: 1px solid black; border-radius: 50%;"></span> `#8298E3` 
 
-- **Tasks Reminder:**
-<span style="display:inline-block; width:12px; height:12px; background-color:#F5CFBE; border: 1px solid black; border-radius: 50%;"></span> `#F5CFBE`
-<span style="display:inline-block; width:12px; height:12px; background-color:#D2805A; border: 1px solid black; border-radius: 50%;"></span> `#D2805A`
+### Tasks Reminder
+- <span style="display:inline-block; width:12px; height:12px; background-color:#F5CFBE; border: 1px solid black; border-radius: 50%;"></span> `#F5CFBE`
+- <span style="display:inline-block; width:12px; height:12px; background-color:#D2805A; border: 1px solid black; border-radius: 50%;"></span> `#D2805A`
 
-- **Meeting Reminder:** <span style="display:inline-block; width:12px; height:12px; background-color:#6763B6; border: 1px solid black; border-radius: 50%;"></span> `[#6763B6]`
+### Meeting Reminder
+- <span style="display:inline-block; width:12px; height:12px; background-color:#6763B6; border: 1px solid black; border-radius: 50%;"></span> `[#6763B6]`
 
-- **Default:** <span style="display:inline-block; width:12px; height:12px; background-color:#F1F2F2; border: 1px solid black; border-radius: 50%;"></span> `#F1F2F2`
-
+### Default
+- <span style="display:inline-block; width:12px; height:12px; background-color:#F1F2F2; border: 1px solid black; border-radius: 50%;"></span> `#F1F2F2`
