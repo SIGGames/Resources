@@ -53,15 +53,19 @@
       margin: 0;
       font-size: 3.5em;
     }
+    .header img {
+      max-width: 100%;
+    }
 
     .content {
       padding: 35px;
       color: #333132;
     }
-    .content p, strong {
+    .content span, strong {
       font-size: 15px;
       line-height: 1.75;
       text-align: justify;
+      display: block;
     }
 
     .card-title {
@@ -124,6 +128,11 @@
       gap: 15px;
     }
 
+    table {
+      border-spacing: 0px !important;
+      border-collapse: collapse !important;
+    }
+
     .table {
       border: 1px solid #8298E3;
       width: 100%;
@@ -151,6 +160,17 @@
       display: flex;
       justify-content: center;
     }
+
+    .code {
+      background-color: #E0E0E0;
+      border-radius: 3px;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+
+    li {
+      text-align: start;
+    }
   </style>
 </head>
 
@@ -166,11 +186,11 @@
 
       <!-- Content: Introduction -->
       <div class="content">
-        <p class="email-type">Newsletter DevTeam</p>
+        <span class="email-type center">Newsletter DevTeam</span>
 
         <strong>Bona nit,</strong><div class="ds"></div>
 
-        <p>En la reunió d'equip <i>[Tipus de reunió] (Sprint [X])</i> del [dia de la setmana] [número] de [mes], s'han comentat temes importants del projecte que cal que es llegeixin detingudament. En aquest correu es fa una recopilació de tot el que s'ha comentat en la reunió i l'estat actual del projecte.</p><div class="ds"></div>
+        <span>En la reunió d'equip <i>[Tipus de reunió] (Sprint [X])</i> del [dia de la setmana] [número] de [mes], s'han comentat temes importants del projecte que cal que es llegeixin detingudament. En aquest correu es fa una recopilació de tot el que s'ha comentat en la reunió i l'estat actual del projecte.</span><div class="ds"></div>
         
         <strong>SIG Games</strong>
       </div>
@@ -179,25 +199,24 @@
 
       <!-- Content -->
       <div class="content">
-        <p class="card-title">[Títol del tema de conversa]</p>
-        <p class="card-subtitle">[Participant/s (Nom Cognom1 · Nom Cognom1)] - [Tipus de reunió] ([DD/MM/AAAA])</p><div class="ds"></div>
+        <span class="card-title">[Títol del tema de conversa]</span>
+        <span class="card-subtitle">[Participant/s (Nom Cognom1 · Nom Cognom1)] - [Tipus de reunió] ([DD/MM/AAAA])</span><div class="ds"></div>
 
-        <p>[Explicació del tema de conversa, conclusions, següents passos a seguir, etc.]</p>
+        <span>[Explicació del tema de conversa, conclusions, següents passos a seguir, etc.]</span>
       </div>
 
       <div class="divider"></div>
 
       <!-- Content -->
       <div class="content">
-        <p class="card-title">Exemple</p>
-        <p class="card-subtitle">Júlia Nogales - Daily Meeting (18/08/2024)</p><div class="ds"></div>
+        <span class="card-title">Exemple</span>
+        <span class="card-subtitle">Júlia Nogales - Daily Meeting (18/08/2024)</span><div class="ds"></div>
 
-        <p>Als correus es pot afegir un link a una pàgina web com <a rel="noopener" target="_blank" href="https://discord.gg/XAQUEgqP7x">Discord</a> o un document
-          qualsevol de Confluence (<a rel="noopener" target="_blank" href="https://siggames-pacomonkey.atlassian.net/wiki/spaces/PacoMonkey/pages/15827063/Project+Blastoff">Project Blastoff</a>).</p><div class="ds"></div>
+        <span>Als correus es pot afegir un link a una pàgina web com <a rel="noopener" target="_blank" href="https://discord.gg/XAQUEgqP7x">Discord</a> o un document qualsevol de Confluence (<a rel="noopener" target="_blank" href="https://siggames-pacomonkey.atlassian.net/wiki/spaces/PacoMonkey/pages/15827063/Project+Blastoff">Project Blastoff</a>).</span><div class="ds"></div>
         
-        <p>També es poden referenciar adreces de correus electrònics com "<a class="mailto" href="mailto:contact@siggames.cat">contact@siggames.cat</a>".</p><div class="ds"></div>
+        <span>També es poden referenciar adreces de correus electrònics com "<a class="mailto" href="mailto:contact@siggames.cat">contact@siggames.cat</a>".</span><div class="ds"></div>
         
-        <p>Una taula pot ser útil per ordenar dades de forma clara i visual:</p><div class="ds"></div>
+        <span>Una taula pot ser útil per ordenar dades de forma clara i visual:</span><div class="ds"></div>
 
 
         <table class="table">
@@ -221,20 +240,18 @@
             <th class="table-head end">49,00 €</td>
           </tr>
           </table><div class="ds"></div>
-        
-        
 
-        <p>Per esdeveniments importants es pot incorporar un contador creat amb alguna eina disponible d'internet.</p><div class="ds"></div>
+        <span>Per esdeveniments importants es pot incorporar un contador creat amb alguna eina disponible d'internet.</span><div class="ds"></div>
 
         <div class="center">
           <img src="https://countdown.unlayer.com/generate/oK387ntOpjjo" alt="Temps restant" title="Temps restant" width="284">
         </div><div class="ds"></div>
 
-        <p>Per consultar informació sobre aquesta i altres plantilles de correu electrònic:
-          <li>Guia de colors: <code>colors-guide.md</code></li>
-          <li>Iconos de xarxes socials i links de SIG Games: <code>contact-icons-link.md</code></li>
-          <li>Isotips de SIG Games (base64): <code>isotips-base64.txt</code></li>
-        </p>
+        <span>Per consultar informació sobre aquesta i altres plantilles de correu electrònic:
+          <li>Guia de colors: <code class="code">colors-guide.md</code></li>
+          <li>Isotips de SIG Games (base64): <code class="code">isotips-base64.txt</code></li>
+          <li>Icones de xarxes socials i links de SIG Games: <code class="code">contact-icons.md</code></li>
+        </span>
       </div>
 
       <div class="divider"></div>
@@ -255,9 +272,9 @@
           <a href="https://www.tiktok.com/@siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670299.png" alt="TikTok" title="SIG Games · TikTok" width="32"></a>
         </div>
 
-        <p>Si no vols rebre més correus, clica <a href="#">aquí</a>  per desactivar la subscripció.</p>
-        <p>Si tens alguna pregunta, envia'ns un missatge a <a class="mailto" href="mailto:contact@siggames.cat">contact@siggames.cat</a>.</p>
-        <p>&copy; 2024 SIG Games. Tots els drets reservats.</p>
+        <span>Si no vols rebre més correus, clica <a href="#">aquí</a>  per desactivar la subscripció.</span>
+        <span>Si tens alguna pregunta, envia'ns un missatge a <a class="mailto" href="mailto:contact@siggames.cat">contact@siggames.cat</a>.</span>
+        <span>&copy; 2024 SIG Games. Tots els drets reservats.</span>
       </div>
     </div>
   </div>
