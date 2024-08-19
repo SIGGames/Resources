@@ -65,11 +65,13 @@
       font-size: 15px;
       line-height: 1.75;
       text-align: justify;
+    }
+    .content span {
       display: block;
     }
 
     .card-title {
-      color: #8298E3;
+      color: #60B498;
       font-weight: bold;
     }
     .card-subtitle {
@@ -78,11 +80,10 @@
     }
 
     .email-type {
-      color: #8298E3;
+      color: #60B498;
       font-size: 1.7em !important;
       font-weight: bold;
       text-align: center !important;
-      padding-bottom: 30px;
       font-family: Cocon, Arial, sans-serif;
     }
 
@@ -102,12 +103,12 @@
       color: #777777;
     }
     a {
-      color: #8298E3;
+      color: #60B498;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
-      color: #8298E3;
+      color: #60B498;
     }
     a:focus {
       outline: none;
@@ -134,14 +135,14 @@
     }
 
     .table {
-      border: 1px solid #8298E3;
+      border: 1px solid #60B498;
       width: 100%;
     }
     .table-head {
       padding: 15px;
       text-align: start;
-      border-bottom: 1px solid #8298E3 !important;
-      border-top: 1px solid #8298E3 !important;
+      border-bottom: 1px solid #60B498 !important;
+      border-top: 1px solid #60B498 !important;
     }
     .table-rows {
       padding-left: 15px;
@@ -149,7 +150,7 @@
       padding-top: 13px;
       padding-bottom: 13px;
       text-align: start;
-      border-top: 1px solid #C2CDF0;
+      border-top: 1px solid #FFC1BC;
       /*border-bottom: 1px solid #CED7F5;*/
     }
     .end {
@@ -171,6 +172,53 @@
     li {
       text-align: start;
     }
+
+    button {
+      background-color: #60B498;
+      color: #FFFFFF;
+      font-weight: bold;
+      font-family: Montserrat, Arial, sans-serif;
+      font-size: 15px;
+      border: 1px solid #60B498;
+      border-radius: 5px;
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      cursor: pointer;
+    }
+
+    .button-title {
+        font-weight: bold;
+        font-size: 1.2em !important;
+        text-align: center !important;
+    }
+
+    .sprint {
+        text-align: center;
+        font-size: 1.3em;
+        display: block;
+    }
+    
+    .sprint-date {
+        text-align: center !important;
+        font-size: 1.1em !important;
+        padding-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .col {
+      flex: 1;
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -186,72 +234,46 @@
 
       <!-- Content: Introduction -->
       <div class="content">
-        <span class="email-type center">Newsletter DevTeam</span>
+        <span class="email-type center">Recordatori Reunió</span>
+        <strong class="sprint">[Meeting Type] (Sprint [X])</strong>
+        <span class="sprint-date">{{now.format("dd/MM/yyyy")}}</span><div class="ds"></div>
 
-        <strong>Bona nit,</strong><div class="ds"></div>
+        <strong>Bon dia,</strong><div class="ds"></div>
 
-        <span>En la reunió d'equip <i>[Tipus de reunió] (Sprint [X])</i> del [dia de la setmana] [número] de [mes], s'han comentat temes importants del projecte que cal que es llegeixin detingudament. En aquest correu es fa una recopilació de tot el que s'ha comentat en la reunió i l'estat actual del projecte.</span><div class="ds"></div>
-        
+        <span>Aquest missatge és un recordatori del <i>[meeting type]</i> (<i>Sprint</i> [X]) del {{now.format("dd/MM/yyyy")}}, a les <strong>[hh:mm]h</strong> a Discord.</span><div class="ds"></div>
+
+        <span>Una <i>daily meeting</i> és una breu reunió (30min - 45min) en la que es reporta el progrés en les tasques actuals, es comenten dubtes i problemes puntuals que hagin pogut sorgir i altres consideracions ràpides que es creguin oportunes.</span><div class="ds"></div>
+
+        <span>Recorda preparar tot allò que desitgis comentar en la reunió, arriba puntual, tingues una actitud participativa i confirma la teva assistència a Google Calendar si encara no ho has fet.</span><div class="ds"></div>
+
+        <span>T'hi esperem!</span><div class="ds"></div>
         <strong>SIG Games</strong>
       </div>
 
       <div class="divider"></div>
 
       <!-- Content -->
-      <div class="content">
-        <span class="card-title">[Títol del tema de conversa]</span>
-        <span class="card-subtitle">[Participant/s (Nom Cognom1 · Nom Cognom1)] - [Tipus de reunió] ([DD/MM/AAAA])</span><div class="ds"></div>
-
-        <span>[Explicació del tema de conversa, conclusions, següents passos a seguir, etc.]</span>
+      <div class="content row">
+        <div class="col">
+          <span class="card-title">Data</span>
+          <strong>{{now.format("dd/MM/yyyy")}}</strong>
+          <span>[hh:mm]h - [hh:mm]h</span>
+        </div>
+      
+        <div class="col">
+          <span class="card-title">Lloc</span>
+          <strong>[Presencial/Remot]</strong>
+          <span>[On?]</span>
+        </div>
       </div>
 
       <div class="divider"></div>
 
       <!-- Content -->
       <div class="content">
-        <span class="card-title">Exemple</span>
-        <span class="card-subtitle">Júlia Nogales - Daily Meeting (18/08/2024)</span><div class="ds"></div>
-
-        <span>Als correus es pot afegir un link a una pàgina web com <a rel="noopener" target="_blank" href="https://discord.gg/XAQUEgqP7x">Discord</a> o un document qualsevol de Confluence (<a rel="noopener" target="_blank" href="https://siggames-pacomonkey.atlassian.net/wiki/spaces/PacoMonkey/pages/15827063/Project+Blastoff">Project Blastoff</a>).</span><div class="ds"></div>
+        <span class="button-title">Per més informació sobre els esdeveniments</span><div class="ds"></div>
         
-        <span>També es poden referenciar adreces de correus electrònics com "<a class="mailto" href="mailto:contact@siggames.cat">contact@siggames.cat</a>".</span><div class="ds"></div>
-        
-        <span>Una taula pot ser útil per ordenar dades de forma clara i visual:</span><div class="ds"></div>
-
-
-        <table class="table">
-          <tr>
-            <th colspan="2" class="table-head">Rebut compra entrades</th>
-          </tr>
-          <tr>
-            <td class="table-rows">Student Pass</td>
-            <td class="table-rows end">20,00 €</td>
-          </tr>
-          <tr>
-            <td class="table-rows">Student Pass</td>
-            <td class="table-rows end">20,00 €</td>
-          </tr>
-          <tr>
-            <td class="table-rows">General Ticket Saturday</td>
-            <td class="table-rows end">09,00 €</td>
-          </tr>
-          <tr>
-            <th class="table-head">TOTAL</td>
-            <th class="table-head end">49,00 €</td>
-          </tr>
-        </table><div class="ds"></div>
-
-        <span>Per esdeveniments importants es pot incorporar un contador creat amb alguna eina disponible d'internet.</span><div class="ds"></div>
-
-        <div class="center">
-          <img src="https://countdown.unlayer.com/generate/oK387ntOpjjo" alt="Temps restant" title="Temps restant" width="284">
-        </div><div class="ds"></div>
-
-        <span>Per consultar informació sobre aquesta i altres plantilles de correu electrònic:
-          <li>Guia de colors: <code class="code">colors-guide.md</code></li>
-          <li>Isotips de SIG Games (base64): <code class="code">isotips-base64.txt</code></li>
-          <li>Icones de xarxes socials i links de SIG Games: <code class="code">contact-icons.md</code></li>
-        </span>
+        <a href="https://calendar.google.com/calendar/embed?src=53aee46ae85dfc2e641778b70e57267b3a9b1c8cebe443ac9867ca08a812f2c9%40group.calendar.google.com&ctz=Europe%2FMadrid" title="Tauler sprint actiu SIG Games · Jira"><button>Clica aquí</button></a>
       </div>
 
       <!-- Footer -->
