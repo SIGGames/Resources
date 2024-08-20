@@ -65,6 +65,8 @@
       font-size: 15px;
       line-height: 1.75;
       text-align: justify;
+    }
+    .content span {
       display: block;
     }
 
@@ -82,7 +84,6 @@
       font-size: 1.7em !important;
       font-weight: bold;
       text-align: center !important;
-      padding-bottom: 30px;
       font-family: Cocon, Arial, sans-serif;
     }
 
@@ -171,6 +172,22 @@
     li {
       text-align: start;
     }
+
+    .sprint {
+        text-align: center !important;
+        font-size: 1.4em !important;
+        font-weight: bold;
+    }
+    
+    .sprint-date {
+        text-align: center !important;
+        font-size: 1.1em !important;
+        padding-bottom: 20px;
+    }
+
+    tt {
+      font-size: 16px;
+    }
   </style>
 </head>
 
@@ -187,10 +204,12 @@
       <!-- Content: Introduction -->
       <div class="content">
         <span class="email-type center">Newsletter DevTeam</span>
+        <span class="sprint"></span>
+        <span class="sprint-date">14/07/2024</span><div class="ds"></div>
 
         <strong>Bona nit,</strong><div class="ds"></div>
 
-        <span>En la reunió d'equip <i>[Tipus de reunió] (Sprint [X])</i> del [dia de la setmana] [número] de [mes], s'han comentat temes importants del projecte que cal que es llegeixin detingudament. En aquest correu es fa una recopilació de tot el que s'ha comentat en la reunió i l'estat actual del projecte.</span><div class="ds"></div>
+        <span>En l'última reunió d'equip <i>Daily Meeting</i> (<i>Sprint</i> 1) del dissabte 13 de juliol, s'han pres decisions significatives per l'avenç i la metodologia de treball del projecte. En aquest correu es fa una recopilació de tot el que s'ha comentat en la reunió i l'estat actual del projecte.</span><div class="ds"></div>
         
         <strong>SIG Games</strong>
       </div>
@@ -199,10 +218,65 @@
 
       <!-- Content -->
       <div class="content">
-        <span class="card-title">[Títol del tema de conversa]</span>
-        <span class="card-subtitle">[Participant/s (Nom Cognom1 · Nom Cognom1)] - [Tipus de reunió] ([DD/MM/AAAA])</span><div class="ds"></div>
+        <span class="card-title">Nou estat de tasca en el flux de treball</span>
+        <span class="card-subtitle">Aniol Serrano - <i>Daily Meeting</i> (13/07/2024)</span><div class="ds"></div>
 
-        <span>[Explicació del tema de conversa, conclusions, següents passos a seguir, etc.]</span>
+        <span>Després de moltes propostes d'estats de tasques (<i>En especificació</i>, <i>En revisió d'especificació</i>, <i>Especificada</i>, <i>En desenvolupament</i>, <i>Desenvolupada</i>, <i>En fase de proves</i>, <i>Bloquejada</i>, <i>Finalitzada</i>, <i>Pendent de validar solució</i>) per incorporar en el taulell Kanban de Jira, s'ha acordat que l'únic estat que podria suposar un canvi profitós per l'equip és "Bloquejada", que fins ara s'estava implementant com una etiqueta dins de la tasca.</span><div class="ds"></div>
+
+        <span>Crear aquest nou estat aportarà una forma ràpida i visual de mantenir a l'equip informat del motiu de per què no s'ha començat a treballar en una tasca assignada i d'actuar com a recordatori per totes les persones involucrades que hi ha una tasca que depèn d'ells i no es podrà iniciar fins que no finalitzin la seva.</span><div class="ds"></div>
+
+        <span>Per tant, l'estat final del taulell Kanban serà:</span>
+        <strong><u>Bloquejada</u> → Pendent → En Progrés → En Revisió → Finalitzada</strong>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Llicència de software</span>
+        <span class="card-subtitle">Aniol Serrano - <i>Daily Meeting</i> (13/07/2024)</span><div class="ds"></div>
+
+        <span>S'ha discutit a qui pertany la responsabilitat d'investigar sobre el tipus de llicència que es vol aplicar pel software del projecte al repositori de GitHub. Finalment s'ha acordat que, com que tant el GitHub com el codi del projecte estan a càrrec del departament de programació (Aniol Serrano), també serà responsabilitat d'aquest decidir la llicència del projecte.</span><div class="ds"></div>
+
+        <span>Per decidir-ho cal tenir present els valors i els objectius de l'empresa, com seria buscar la col·laboració amb els jugadors i altres desenvolupadors però alhora ser els propietaris del producte amb la possibilitat de comercialitzar-lo.</span><div class="ds"></div>
+
+        <span>Com que aquesta feina es considera que pertany a la tasca <a href="https://siggames-pacomonkey.atlassian.net/browse/SIG-37?atlOrigin=eyJpIjoiZjBiZTE5ZWMwOGY3NGNkMjkyNTk5NTNhNmMzMWMzNmQiLCJwIjoiaiJ9">GitHub</a>, s'espera que estigui acabada abans de la seva data límit, és a dir, abans del 23 de juliol.</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Facilitat d'exportar el videojoc a mòbil</span>
+        <span class="card-subtitle">Aniol Serrano - <i>Daily Meeting</i> (13/07/2024)</span><div class="ds"></div>
+
+        <span>Amb Unity és possible i relativament fàcil exportar el codi d'un videojoc d'ordinador a mòbil, però pel que respecta a l'àmbit visual no és tan fàcil. Existeixen softwares que permeten fer l'adaptació automàtica mitjançant l'eliminació de píxels per adaptar-ho a la mida petita del dispositiu mòbil, però molts cops no funcionen adequadament. Si és el cas, caldrà prendre una decisió: fer l'exportació manual o cancel·lar-la.</span><div class="ds"></div>
+
+        <span>Com que no es podrà saber fins més endavant, s'ha decidit implementar el codi de forma que sigui fàcilment adaptable per un canvi de dispositiu i deixar la decisió d'exportar el videojoc per més endavant, quan es pugui posar a prova.</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Recordatori registre temps</span>
+        <span class="card-subtitle">Júlia Nogales - <i>Daily Meeting</i> (13/07/2024)</span><div class="ds"></div>
+
+        <span>Recordar que cal enregistrar el moment en que es comença a treballar en una tasca mitjançant l'eina "Actual start" i el temps invertit en aquesta amb "Seguimiento de tiempo" que ofereix Jira.</span><div class="ds"></div>
+
+        <span>D'aquesta forma es podrà fer un anàlisi precís del temps dedicat a cada sprint i en el projecte per poder assignar les tasques de forma més adequada i obtenir un major rendiment de l'equip.</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Identitat visual SIGGames</span>
+        <span class="card-subtitle">Abel Pérez - <i>Daily Meeting</i> (13/07/2024)</span><div class="ds"></div>
+
+        <span>Per poder completar els perfils públics de l'organització SIGGames (GitHub, Gravatar, Discord, etc.) cal que l'equip artístic i de màrketing (Abel Pérez) acabi de desenvolupar la proposta d'identitat visual de l'empresa i proporcioni logos, banners i la paleta de colors.</span><div class="ds"></div>
+
+        <span>Segons màrketing, la identitat visual de SIGGames estarà completada per abans de la reunió <i>Follow-up Meeting</i> del dilluns 15 de juliol i es farà una presentació de la proposta a tot l'equip.</span>
       </div>
 
       <div class="divider"></div>
@@ -212,11 +286,11 @@
         <span class="card-title">Exemple</span>
         <span class="card-subtitle">Júlia Nogales - Daily Meeting (18/08/2024)</span><div class="ds"></div>
 
-        <span>Als correus es pot afegir un link a una pàgina web com <a rel="noopener" target="_blank" href="https://discord.gg/XAQUEgqP7x">Discord</a> o un document qualsevol de Confluence (<a rel="noopener" target="_blank" href="https://siggames-pacomonkey.atlassian.net/wiki/spaces/PacoMonkey/pages/15827063/Project+Blastoff">Project Blastoff</a>).</span><div class="ds"></div>
+        <span>Recentment s'han publicat les entrades per la Fira del Videojoc Indie de Barcelona (7a edició), <a href="https://www.indiedevday.es/">IndieDevDay 2024</a>, que es celebrarà entre el 27 i 29 de setembre de 2024 a <a href="https://maps.app.goo.gl/h7SoXk62j4NkA3vr9">La Farga de l'Hospitalet</a>.</span><div class="ds"></div>
         
-        <span>També es poden referenciar adreces de correus electrònics com "<a class="mailto" href="mailto:contact@siggames.cat">contact@siggames.cat</a>".</span><div class="ds"></div>
+        <span>La fira ofereix un dia (divendres) dedicat a professionals que busquen participar en l'àrea del negoci i estudiants de la indústria del videojoc. La resta dels dies (dissabte i diumenge) estan dirigits als aficionats dels videojocs i les famílies.</span><div class="ds"></div>
         
-        <span>Una taula pot ser útil per ordenar dades de forma clara i visual:</span><div class="ds"></div>
+        <span>L'equip ha trobat molt adequat assistir a la fira i s'han comprat les entrades: dues entrades Student Pass (Júlia i Abel), que permeten l'accés a la fira tots els dies per poder assistir al dia professional i al del públic, i una entrada General Ticket Saturday (Aniol), que només permet l'entrada el dissabte.</span><div class="ds"></div>
 
 
         <table class="table">
@@ -224,34 +298,40 @@
             <th colspan="2" class="table-head">Rebut compra entrades</th>
           </tr>
           <tr>
-            <td class="table-rows">Student Pass</td>
-            <td class="table-rows end">20,00 €</td>
+            <td class="table-rows"><tt>Student Pass</tt></td>
+            <td class="table-rows end"><tt>20,00 €</tt></td>
           </tr>
           <tr>
-            <td class="table-rows">Student Pass</td>
-            <td class="table-rows end">20,00 €</td>
+            <td class="table-rows"><tt>Student Pass</tt></td>
+            <td class="table-rows end"><tt>20,00 €</tt></td>
           </tr>
           <tr>
-            <td class="table-rows">General Ticket Saturday</td>
-            <td class="table-rows end">09,00 €</td>
+            <td class="table-rows"><tt>General Ticket Saturday</tt></td>
+            <td class="table-rows end"><tt>09,00 €</tt></td>
+          </tr>
+          <tr>
+            <td class="table-rows"><tt>Merchandising T-shirt</tt></td>
+            <td class="table-rows end"><tt>11,97 €</tt></td>
+          </tr>
+          <tr>
+            <td class="table-rows"><tt>Entrades reemborsables</tt></td>
+            <td class="table-rows end"><tt>04,88 €</td>
+          </tr>
+          <tr>
+            <td class="table-rows"><tt>Despeses de transacció</tt></td>
+            <td class="table-rows end"><tt>02,30 €</td>
           </tr>
           <tr>
             <th class="table-head">TOTAL</td>
-            <th class="table-head end">49,00 €</td>
+            <th class="table-head end">68,16 €</td>
           </tr>
         </table><div class="ds"></div>
 
-        <span>Per esdeveniments importants es pot incorporar un contador creat amb alguna eina disponible d'internet.</span><div class="ds"></div>
+        <span style="text-align: center;">Temps restant per la fira IndieDevDay 2024:</span><div class="ds"></div>
 
         <div class="center">
           <img src="https://countdown.unlayer.com/generate/oK387ntOpjjo" alt="Temps restant" title="Temps restant" width="284">
-        </div><div class="ds"></div>
-
-        <span>Per consultar informació sobre aquesta i altres plantilles de correu electrònic:
-          <li>Guia de colors: <code class="code">colors-guide.md</code></li>
-          <li>Isotips de SIG Games (base64): <code class="code">isotips-base64.txt</code></li>
-          <li>Icones de xarxes socials i links de SIG Games: <code class="code">contact-icons.md</code></li>
-        </span>
+        </div>
       </div>
 
       <!-- Footer -->
