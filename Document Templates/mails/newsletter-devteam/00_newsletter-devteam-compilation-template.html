@@ -38,7 +38,6 @@
       max-width: 600px;
       margin: 0 auto;
       background-color: #FFFFFF;
-      /*border: 1px solid #dddddd;*/
       overflow: hidden;
     }
 
@@ -71,7 +70,7 @@
     }
 
     .card-title {
-      color: #60B498;
+      color: #8298E3;
       font-weight: bold;
     }
     .card-subtitle {
@@ -80,10 +79,11 @@
     }
 
     .email-type {
-      color: #60B498;
+      color: #8298E3;
       font-size: 1.7em !important;
       font-weight: bold;
       text-align: center !important;
+      padding-bottom: 30px;
       font-family: Cocon, Arial, sans-serif;
     }
 
@@ -103,12 +103,12 @@
       color: #777777;
     }
     a {
-      color: #60B498;
+      color: #8298E3;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
-      color: #60B498;
+      color: #8298E3;
     }
     a:focus {
       outline: none;
@@ -135,14 +135,14 @@
     }
 
     .table {
-      border: 1px solid #60B498;
+      border: 1px solid #8298E3;
       width: 100%;
     }
     .table-head {
       padding: 15px;
       text-align: start;
-      border-bottom: 1px solid #60B498 !important;
-      border-top: 1px solid #60B498 !important;
+      border-bottom: 1px solid #8298E3 !important;
+      border-top: 1px solid #8298E3 !important;
     }
     .table-rows {
       padding-left: 15px;
@@ -150,7 +150,7 @@
       padding-top: 13px;
       padding-bottom: 13px;
       text-align: start;
-      border-top: 1px solid #FFC1BC;
+      border-top: 1px solid #C2CDF0;
       /*border-bottom: 1px solid #CED7F5;*/
     }
     .end {
@@ -173,56 +173,22 @@
       text-align: start;
     }
 
-    button {
-      background-color: #60B498;
-      color: #FFFFFF;
-      font-weight: bold;
-      font-family: Montserrat, Arial, sans-serif;
-      font-size: 15px;
-      border: 1px solid #60B498;
-      border-radius: 5px;
-      width: 100%;
-      padding-top: 15px;
-      padding-bottom: 15px;
+
+    summary {
       cursor: pointer;
+      list-style: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::marker {
+      display: none;
     }
 
-    .button-title {
-        font-weight: bold;
-        font-size: 1.2em !important;
-        text-align: center !important;
+    details[open] summary {
+      color: #000000;
     }
 
-    .sprint {
-        text-align: center !important;
-        font-size: 1.4em !important;
-    }
-    
-    .sprint-date {
-        text-align: center !important;
-        font-size: 1.3em !important;
-        font-weight: bold;
-        padding-bottom: 20px;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .col {
-      flex: 1;
-      min-width: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .text-center {
-      text-align: center !important;
-    }
   </style>
 </head>
 
@@ -238,63 +204,28 @@
 
       <!-- Content: Introduction -->
       <div class="content">
-        <span class="email-type center">Recordatori Reunió</span>
-        <span class="sprint">Retrospective Meeting (Sprint 1)</span>
-        <span class="sprint">Planning Meeting (Sprint 2)</span>
-        <span class="sprint-date">{{now.format("dd/MM/yyyy")}}</span><div class="ds"></div>
+        <span class="email-type center">Newsletter DevTeam <sup>([X])</sup></span>
 
-        <strong>Bon dia,</strong><div class="ds"></div>
+        <strong>Bones,</strong><div class="ds"></div>
 
-        <span>Aquest missatge és un recordatori de la <i>Retrospective Meeting</i> (<i>Sprint</i> 1) i de la <i>Planning Meeting</i> (<i>Sprint</i> 2) del dilluns, {{now.format("dd/MM/yyyy")}}, a les <strong>18:00h</strong> en format presencial, a l'aula 2.11 de l'Edifici Polivalent 1 del Campus de Cappont de la Universitat de Lleida (UdL).</span><div class="ds"></div>
-
-        <span><strong>Recordeu que durant el mes d'agost la sala de reunions de l'equip es trasllada a l'aula 2.11 del Polivalent 1 del Campus de Cappont.</strong></span><div class="ds"></div>
-
-        <span>Una <i>retrospective meeting</i> és una reunió realitzada al final de cada sprint per reflexionar sobre què ha sortit bé i malament i quines lliçons s'han aprés, amb l'objectiu d'identificar àrees de millora i desenvolupar plans d'acció per futures iteracions.</span><div class="ds"></div>
-
-        <span>Una <i>planning meeting</i> és una reunió realitzada al principi de cada sprint per establir objectius, assignar tasques, definir prioritats i crear un pla d'acció per aconseguir els resultats desitjats.</span><div class="ds"></div>
-
-        <span>Recorda preparar tot allò que desitgis comentar en la reunió, arriba puntual, tingues una actitud participativa i confirma la teva assistència a Google Calendar si encara no ho has fet.</span><div class="ds"></div>
-
-        <span>T'hi esperem!</span>
+        <span>En aquest arxiu trobaràs la recopil·lació completa de totes les "Newsletter DevTeam" enviades.</span><div class="ds"></div>
+        
         <strong>SIG Games</strong>
       </div>
 
       <div class="divider"></div>
 
       <!-- Content -->
-      <div class="content row">
-        <div class="col">
-          <div>
-            <img alt="Data" title="Data" src="data:image/png;base64,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" width="100">
-          </div>
-          <span class="card-title">Data</span>
-          <strong>{{now.format("dd/MM/yyyy")}}</strong>
-          <span>18:00h - 19:30h (<i>Retrospective</i>)</span>
-          <span>19:30h - 21:00h (<i>Planning</i>)</span>
-        </div>
-      
+      <div class="content">
+        <span class="card-title">[Títol resum newsletter]</span>
+        <span class="card-subtitle">Sprint 1 (14/07/2024)</span><div class="ds"></div>
 
-        <div class="col">
-          <div>
-            <img alt="Lloc" title="Lloc" src="data:image/png;base64,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" width="100">
-          </div>
-          <span class="card-title">Lloc</span>
-          <strong>Aula 2.11</strong>
-          <a class="mailto" href="https://maps.app.goo.gl/SiAN8c5J3kPt9ri37">
-            <span class="text-center">Polivalent 1,</span>
-            <span class="text-center">Universitat de Lleida</span>
-          </a>
-        </div>
+        <span>[Menció i/o resum dels temes tractats en la newsletter.]</span><div class="ds"></div>
+
+        <span><a href="#" style="font-size: 13px;">Llegir més...</a></span>
       </div>
 
       <div class="divider"></div>
-
-      <!-- Content -->
-      <div class="content">
-        <span class="button-title">Per més informació sobre els esdeveniments</span><div class="ds"></div>
-        
-        <a href="https://calendar.google.com/calendar/embed?src=53aee46ae85dfc2e641778b70e57267b3a9b1c8cebe443ac9867ca08a812f2c9%40group.calendar.google.com&ctz=Europe%2FMadrid" title="Calendari SIG Games · Google Calendar"><button>Clica aquí</button></a>
-      </div>
 
       <!-- Footer -->
       <div class="footer">

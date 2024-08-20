@@ -240,9 +240,9 @@
 
         <strong>Bon dia,</strong><div class="ds"></div>
 
-        <span>Aquest missatge és un recordatori del <i>Daily Meeting</i> (<i>Sprint</i> 2) del diumenge, {{now.format("dd/MM/yyyy")}}, a les <strong>12:00h</strong> a Discord.</span><div class="ds"></div>
+        <span>Aquest missatge és un recordatori del <i>[meeting type]</i> (<i>Sprint</i> [X]) del {{now.format("dd/MM/yyyy")}}, a les <strong>[hh:mm]h</strong> a [on?].</span><div class="ds"></div>
 
-        <span>Una <i>daily meeting</i> és una breu reunió (30min - 45min) en la que es reporta el progrés en les tasques actuals, es comenten dubtes i problemes puntuals que hagin pogut sorgir i altres consideracions ràpides que es creguin oportunes.</span><div class="ds"></div>
+        <span>La [<i>meeting type</i>] consisteix en [...] </span><div class="ds"></div>
 
         <span>Recorda preparar tot allò que desitgis comentar en la reunió, arriba puntual, tingues una actitud participativa i confirma la teva assistència a Google Calendar si encara no ho has fet.</span><div class="ds"></div>
 
@@ -260,7 +260,7 @@
           </div>
           <span class="card-title">Data</span>
           <strong>{{now.format("dd/MM/yyyy")}}</strong>
-          <span>12:00h - 12:45h</span>
+          <span>[hh:mm]h - [hh:mm]h</span>
         </div>
       
 
@@ -269,8 +269,8 @@
             <img alt="Lloc" title="Lloc" src="data:image/png;base64,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" width="100">
           </div>
           <span class="card-title">Lloc</span>
-          <strong>Discord</strong>
-          <span><a class="mailto" href="https://discord.gg/hgYt9BRtHG">SIG Games · team-meetings</a></span>
+          <strong>[Presencial/Remot]</strong>
+          <span><a class="mailto" href="#">[On?]</a></span>
         </div>
       </div>
 
