@@ -3,6 +3,9 @@
 This repository contains the following resources:
 
 - [Software](Software/): Contains the software for the project.
+- [Logotypong](Logotypong/): Contains all the resources about logotyping for SIG Games company and its games.
+- [Document Templates](Document%20Templates/): Contains the templates for the documents of the project.
+- [Email Registry](Email%20Registry/): Contains all the registry of the emails sent during the project.
  
 
 ## Team members
