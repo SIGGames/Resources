@@ -22,6 +22,7 @@
     .init-divider {
       background-color: white;
       padding: 5px;
+      border: 1px solid #F1F2F2;
     }
 
     .divider {
@@ -60,16 +61,19 @@
     .content {
       padding: 35px;
       color: #333132;
+      border: 1px solid #F1F2F2;
     }
     .content span, strong {
       font-size: 15px;
       line-height: 1.75;
       text-align: justify;
+    }
+    .content span {
       display: block;
     }
 
     .card-title {
-      color: #ED7D72;
+      color: #8298E3;
       font-weight: bold;
     }
     .card-subtitle {
@@ -78,7 +82,7 @@
     }
 
     .email-type {
-      color: #ED7D72;
+      color: #8298E3;
       font-size: 1.7em !important;
       font-weight: bold;
       text-align: center !important;
@@ -86,11 +90,11 @@
     }
 
     .mailto {
-      color: #777777;
-      text-decoration: underline;
+      color: #777777 !important;
+      text-decoration: underline !important;
     }
     .mailto:hover {
-      color: #333132;
+      color: #333132 !important;
     }
 
     .footer {
@@ -101,20 +105,21 @@
       color: #777777;
     }
     a {
-      color: #ED7D72;
-      text-decoration: none;
+      color: #8298E3 !important;
+      text-decoration: none !important;
     }
     a:hover {
-      text-decoration: underline;
-      color: #ED7D72;
+      text-decoration: underline !important;
+      color: #8298E3 !important;
     }
     a:focus {
-      outline: none;
+      outline: none !important;
+      background-color: #8298E32A !important;
     }
     
     .isotip {
       padding-top: 15px;
-      padding-bottom: 25px;
+      padding-bottom: 10px;
     }
     .isotip img {
       max-width: 100%;
@@ -133,14 +138,14 @@
     }
 
     .table {
-      border: 1px solid #ED7D72;
+      border: 1px solid #8298E3;
       width: 100%;
     }
     .table-head {
       padding: 15px;
       text-align: start;
-      border-bottom: 1px solid #ED7D72 !important;
-      border-top: 1px solid #ED7D72 !important;
+      border-bottom: 1px solid #8298E3 !important;
+      border-top: 1px solid #8298E3 !important;
     }
     .table-rows {
       padding-left: 15px;
@@ -148,7 +153,7 @@
       padding-top: 13px;
       padding-bottom: 13px;
       text-align: start;
-      border-top: 1px solid #FFC1BC;
+      border-top: 1px solid #C2CDF0;
       /*border-bottom: 1px solid #CED7F5;*/
     }
     .end {
@@ -160,37 +165,17 @@
       justify-content: center;
     }
 
-    .code {
+    code {
       background-color: #E0E0E0;
       border-radius: 3px;
       padding-left: 4px;
       padding-right: 4px;
     }
-
+    /*
     li {
       text-align: start;
     }
-
-    button {
-      background-color: #ED7D72;
-      color: #FFFFFF;
-      font-weight: bold;
-      font-family: Montserrat, Arial, sans-serif;
-      font-size: 15px;
-      border: 1px solid #ED7D72;
-      border-radius: 5px;
-      width: 100%;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      cursor: pointer;
-    }
-
-    .button-title {
-        font-weight: bold;
-        font-size: 1.2em !important;
-        text-align: center !important;
-    }
-
+    */ 
     .sprint {
         text-align: center !important;
         font-size: 1.4em !important;
@@ -201,6 +186,13 @@
         text-align: center !important;
         font-size: 1.1em !important;
         padding-bottom: 20px;
+    }
+
+    tt {
+      font-size: 16px;
+    }
+    ul {
+      list-style-type: disc;
     }
   </style>
 </head>
@@ -217,56 +209,43 @@
 
       <!-- Content: Introduction -->
       <div class="content">
-        <span class="email-type center">Recordatori Tasques</span>
-        <span class="sprint">Sprint [X]</span>
-        <span class="sprint-date">[(DD/MM/AAAA) - (DD/MM/AAAA)]</span><div class="ds"></div>
+        <span class="email-type center">Newsletter DevTeam <sup>([X])</sup></span>
 
-        <strong>Bon dia,</strong><div class="ds"></div>
+        <strong>Bones,</strong><div class="ds"></div>
 
-        <span>Aquest missatge és un recordatori de totes les tasques que tens assignades sense completar durant aquest <i>sprint</i>.</span><div class="ds"></div>
-
-        <span>Recorda prioritzar totes aquelles tasques que estan més properes a la data límit i que generen dependència per tal d'agilitzar el progrés i no generar bloquejos.</span><div class="ds"></div>
-
-        <span>Ànims i som-hi!</span><div class="ds"></div>
-        <strong>SIG Games</strong>
-
-        <span>{{#lookupIssues}}</span>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Content -->
-      <div class="content">
-        <span class="card-title">{{key}} - {{summary}}</span>
-        <span class="card-subtitle">{{duedate.format("dd/MM/yyyy")}} ({{status.name}})</span><div class="ds"></div>
-
-        <span>{{description}}</span>
-        <span>{{/}}</span>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Content -->
-      <div class="content">
-        <span class="button-title">Per més informació sobre les tasques</span><div class="ds"></div>
+        <span>En aquest arxiu trobaràs la recopil·lació completa de totes les "Newsletter DevTeam" enviades.</span><div class="ds"></div>
         
-        <a href="https://siggames-pacomonkey.atlassian.net/jira/software/c/projects/SIG/boards/2" title="Tauler sprint actiu SIG Games · Jira"><button>Clica aquí</button></a>
+        <strong>SIG Games</strong>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">[Títol resum newsletter]</span>
+        <span class="card-subtitle">Sprint [X] (DD/MM/AAAA)</span><div class="ds"></div>
+
+        <span>[Menció i/o resum dels temes tractats en la newsletter.]</span><div class="ds"></div>
+
+        <span><a href="#" style="font-size: 13px;">Llegir més...</a></span>
       </div>
 
       <!-- Footer -->
       <div class="footer">
         <div class="isotip center">
-          <a href="http://www.siggames.cat" target="_blank"><img alt="SIG Games" title="SIG Games · Web Page" src="https://raw.githubusercontent.com/SIGGames/Resources/main/Logotyping/Digital/PNG/3x/Isotip%20sobre%20blanc%403x.png"></a>
+          <a href="http://www.siggames.cat" target="_blank"><img alt="SIG Games" title="SIG Games · Web Page" src="https://raw.githubusercontent.com/SIGGames/Resources/main/Document%20Templates/mails/img/siggames-iso.png"></a>
         </div>
 
-        <div class="contact-icons center">
-          <a href="mailto:contact@siggames.cat" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" title="SIG Games · Email" width="32"></a>
-          <a href="https://discord.gg/XAQUEgqP7x" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670325.png" alt="Discord" title="SIG Games · Discord" width="32"></a>
-          <a href="https://github.com/SIGGames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="SIG Games · GitHub" width="32"></a>
-          <a href="https://www.linkedin.com/company/siggames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/4494/4494471.png" alt="LinkedIn" title="SIG Games · LinkedIn" width="32"></a>
-          <a href="https://www.instagram.com/siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png" alt="Instagram" title="SIG Games · Instagram" width="32"></a>
-          <a href="https://www.tiktok.com/@siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670299.png" alt="TikTok" title="SIG Games · TikTok" width="32"></a>
-        </div>
+        <table role="presentation" align="center" style="border-collapse: collapse; text-align: center; margin: 0 auto; margin-bottom: 10px;">
+          <tr>
+            <td style="padding: 7px;"><a href="mailto:contact@siggames.cat" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" title="SIG Games · Email" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://discord.gg/XAQUEgqP7x" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670325.png" alt="Discord" title="SIG Games · Discord" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://github.com/SIGGames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="SIG Games · GitHub" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.linkedin.com/company/siggames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/4494/4494471.png" alt="LinkedIn" title="SIG Games · LinkedIn" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.instagram.com/siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png" alt="Instagram" title="SIG Games · Instagram" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.tiktok.com/@siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670299.png" alt="TikTok" title="SIG Games · TikTok" width="32" style="display: block;"></a></td>
+          </tr>
+        </table>
 
         <span>Si no vols rebre més correus, clica <a href="#">aquí</a>  per desactivar la subscripció.</span><div></div>
         <span>Si tens alguna pregunta, envia'ns un missatge a <a class="mailto" href="mailto:contact@siggames.cat">contact@siggames.cat</a>.</span><div></div>
