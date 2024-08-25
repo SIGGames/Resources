@@ -22,6 +22,7 @@
     .init-divider {
       background-color: white;
       padding: 5px;
+      border: 1px solid #F1F2F2;
     }
 
     .divider {
@@ -60,6 +61,7 @@
     .content {
       padding: 35px;
       color: #333132;
+      border: 1px solid #F1F2F2;
     }
     .content span, strong {
       font-size: 15px;
@@ -88,11 +90,11 @@
     }
 
     .mailto {
-      color: #777777;
-      text-decoration: underline;
+      color: #777777 !important;
+      text-decoration: underline !important;
     }
     .mailto:hover {
-      color: #333132;
+      color: #333132 !important;
     }
 
     .footer {
@@ -103,21 +105,21 @@
       color: #777777;
     }
     a {
-      color: #8298E3;
-      text-decoration: none;
+      color: #8298E3 !important;
+      text-decoration: none !important;
     }
     a:hover {
-      text-decoration: underline;
-      color: #8298E3;
+      text-decoration: underline !important;
+      color: #8298E3 !important;
     }
     a:focus {
-      outline: none;
-      background-color: #8298E32A;
+      outline: none !important;
+      background-color: #8298E32A !important;
     }
     
     .isotip {
       padding-top: 15px;
-      padding-bottom: 25px;
+      padding-bottom: 10px;
     }
     .isotip img {
       max-width: 100%;
@@ -199,8 +201,8 @@
       box-sizing: border-box;
     }
     .res {
-      padding-bottom: 15px;
-      padding-top: 15px;
+      padding-bottom: 15px !important;
+      padding-top: 15px !important;
       position: relative;
       cursor: help;
     }
@@ -351,20 +353,13 @@
           <div class="results-3 res center" style="width: 50%;"><span class="tooltip">50.0% (9)</span></div>
         </div>
 
-        <div class="legend">
-          <div class="legend-item">
-            <span class="legend-color legend-color-1"></span>
-            <span>1a opció</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-color legend-color-2"></span>
-            <span>2a opció</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-color legend-color-3"></span>
-            <span>3a opció</span>
-          </div>
-        </div><div class="ds"></div>
+        <table role="presentation" align="center" style="border-collapse: collapse; text-align: center; margin: 0 auto; margin-bottom: 10px;">
+          <tr>
+            <td style="padding: 7px;"><div class="legend-item"><span class="legend-color legend-color-1"></span><span>1a opció</span></div></td>
+            <td style="padding: 7px;"><div class="legend-item"><span class="legend-color legend-color-2"></span><span>2a opció</span></div></td>
+            <td style="padding: 7px;"><div class="legend-item"><span class="legend-color legend-color-3"></span><span>3a opció</span></div></td>
+          </tr>
+        </table>
 
         <span>Per tant, després d'una clara diferència de vots, el 12 d'agost es va proclamar <strong>SIG Games</strong> com a nom oficial de l'empresa i s'han fet els canvis i actualitzacions pertinents per mantenir la consistència del nom.</span>
       </div>
@@ -398,11 +393,16 @@
         <span><li>La idea i el significat d'una molla (<i>springboard</i>) dins del logotip.</li></span>
         <span><li>Les fonts <u>Cocon</u> i <u>Montserrat</u> per títols i text, respectivament.</li></span>
         <span><li>La paleta de colors i la seva justificació.</li></span>
-        <div class="contact-icons center" style="margin-top: 7px;">
-          <div><span style="display:inline-block; width:11px; height:11px; background-color: #F1F1F1; border: 1px solid black; border-radius: 50%;"></span> <code>#F1F2F2</code></div> ·
-          <div><span style="display:inline-block; width:11px; height:11px; background-color: #684B9F; border: 1px solid black; border-radius: 50%;"></span> <code>#684B9F</code></div> ·
-          <div><span style="display:inline-block; width:11px; height:11px; background-color: #333132; border: 1px solid black; border-radius: 50%;"></span> <code>#333132</code></div>
-        </div>
+
+        <table role="presentation" align="center" style="border-collapse: collapse; text-align: center; margin: 0 auto; margin-bottom: 10px;">
+          <tr>
+            <td style="padding: 7px;"><span style="display:inline-block; width:11px; height:11px; background-color: #F1F1F1; border: 1px solid black; border-radius: 50%;"></span> <code>#F1F2F2</code></td>
+            <td style="padding: 7px;">·</td>
+            <td style="padding: 7px;"><span style="display:inline-block; width:11px; height:11px; background-color: #684B9F; border: 1px solid black; border-radius: 50%;"></span> <code>#684B9F</code></td>
+            <td style="padding: 7px;">·</td>
+            <td style="padding: 7px;"><span style="display:inline-block; width:11px; height:11px; background-color: #333132; border: 1px solid black; border-radius: 50%;"></span> <code>#333132</code></td>
+          </tr>
+        </table>
 
         <strong>Punts negatius</strong>
         <span><li>El logotip/isotip transmet més aviat ser una empresa de disseny gràfic, cal·ligrafia o tauletes digitals que una empresa de videojocs.</li></span>
@@ -550,7 +550,7 @@
         <span class="card-title">Resum despeses d'empresa</span>
         <span class="card-subtitle">Júlia Nogales - <i>Daily Meeting</i> (09/08/2024)</span><div class="ds"></div>
 
-        <span>Des de que aquest projecte i l'empresa es van crear, aquestes són totes les despeses de SIG Games (ordenades cronològicament). Pots consultar la factura fent click a la despesa.</span><div class="ds"></div>
+        <span>Des de que aquest projecte i l'empresa es van crear, aquestes són totes les despeses de SIG Games (ordenades cronològicament). Es pot consultar la factura fent click a la despesa.</span><div class="ds"></div>
 
         <table class="table">
           <tr>
@@ -566,29 +566,41 @@
           </tr>
           <tr>
             <td class="table-rows"><tt><a href="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/SIGGames/Resources/main/Bills/aseprite_humble-bundle.pdf">Software Aseprite</a></tt></td>
-            <td class="table-rows end"><tt>20,00 €</tt></td>
+            <td class="table-rows end"><tt>18,33 €</tt></td>
           </tr>
           <tr>
             <th class="table-head">TOTAL</td>
-            <th class="table-head end">114,66 €</td>
+            <th class="table-head end">112,99 €</td>
           </tr>
         </table>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Plantilles arxius empresa</span>
+        <span class="card-subtitle">Júlia Nogales - <i>Daily Meeting</i> (09/08/2024)</span><div class="ds"></div>
+
+        <span>...</span>
       </div>
 
       <!-- Footer -->
       <div class="footer">
         <div class="isotip center">
-          <a href="http://www.siggames.cat" target="_blank"><img alt="SIG Games" title="SIG Games · Web Page" src="https://raw.githubusercontent.com/SIGGames/Resources/main/Logotyping/Digital/PNG/3x/Isotip%20sobre%20blanc%403x.png"></a>
+          <a href="http://www.siggames.cat" target="_blank"><img alt="SIG Games" title="SIG Games · Web Page" src="https://raw.githubusercontent.com/SIGGames/Resources/main/Document%20Templates/mails/img/siggames-iso.png"></a>
         </div>
 
-        <div class="contact-icons center">
-          <a href="mailto:contact@siggames.cat" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" title="SIG Games · Email" width="32"></a>
-          <a href="https://discord.gg/XAQUEgqP7x" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670325.png" alt="Discord" title="SIG Games · Discord" width="32"></a>
-          <a href="https://github.com/SIGGames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="SIG Games · GitHub" width="32"></a>
-          <a href="https://www.linkedin.com/company/siggames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/4494/4494471.png" alt="LinkedIn" title="SIG Games · LinkedIn" width="32"></a>
-          <a href="https://www.instagram.com/siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png" alt="Instagram" title="SIG Games · Instagram" width="32"></a>
-          <a href="https://www.tiktok.com/@siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670299.png" alt="TikTok" title="SIG Games · TikTok" width="32"></a>
-        </div>
+        <table role="presentation" align="center" style="border-collapse: collapse; text-align: center; margin: 0 auto; margin-bottom: 10px;">
+          <tr>
+            <td style="padding: 7px;"><a href="mailto:contact@siggames.cat" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" title="SIG Games · Email" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://discord.gg/XAQUEgqP7x" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670325.png" alt="Discord" title="SIG Games · Discord" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://github.com/SIGGames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="SIG Games · GitHub" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.linkedin.com/company/siggames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/4494/4494471.png" alt="LinkedIn" title="SIG Games · LinkedIn" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.instagram.com/siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png" alt="Instagram" title="SIG Games · Instagram" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.tiktok.com/@siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670299.png" alt="TikTok" title="SIG Games · TikTok" width="32" style="display: block;"></a></td>
+          </tr>
+        </table>
 
         <span>Si no vols rebre més correus, clica <a href="#">aquí</a>  per desactivar la subscripció.</span><div></div>
         <span>Si tens alguna pregunta, envia'ns un missatge a <a class="mailto" href="mailto:contact@siggames.cat">contact@siggames.cat</a>.</span><div></div>

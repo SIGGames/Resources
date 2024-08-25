@@ -22,6 +22,7 @@
     .init-divider {
       background-color: white;
       padding: 5px;
+      border: 1px solid #F1F2F2;
     }
 
     .divider {
@@ -60,11 +61,14 @@
     .content {
       padding: 35px;
       color: #333132;
+      border: 1px solid #F1F2F2;
     }
     .content span, strong {
       font-size: 15px;
       line-height: 1.75;
       text-align: justify;
+    }
+    .content span {
       display: block;
     }
 
@@ -86,11 +90,11 @@
     }
 
     .mailto {
-      color: #777777;
-      text-decoration: underline;
+      color: #777777 !important;
+      text-decoration: underline !important;
     }
     .mailto:hover {
-      color: #333132;
+      color: #333132 !important;
     }
 
     .footer {
@@ -101,20 +105,21 @@
       color: #777777;
     }
     a {
-      color: #ED7D72;
-      text-decoration: none;
+      color: #ED7D72 !important;
+      text-decoration: none !important;
     }
     a:hover {
-      text-decoration: underline;
-      color: #ED7D72;
+      text-decoration: underline !important;
+      color: #ED7D72 !important;
     }
     a:focus {
-      outline: none;
+      outline: none !important;
+      background-color: #ED7D722A !important;
     }
     
     .isotip {
       padding-top: 15px;
-      padding-bottom: 25px;
+      padding-bottom: 10px;
     }
     .isotip img {
       max-width: 100%;
@@ -122,35 +127,6 @@
       width: 15%;
     }
 
-    .contact-icons {
-      padding-bottom: 20px;
-      gap: 15px;
-    }
-
-    table {
-      border-spacing: 0px !important;
-      border-collapse: collapse !important;
-    }
-
-    .table {
-      border: 1px solid #ED7D72;
-      width: 100%;
-    }
-    .table-head {
-      padding: 15px;
-      text-align: start;
-      border-bottom: 1px solid #ED7D72 !important;
-      border-top: 1px solid #ED7D72 !important;
-    }
-    .table-rows {
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-top: 13px;
-      padding-bottom: 13px;
-      text-align: start;
-      border-top: 1px solid #FFC1BC;
-      /*border-bottom: 1px solid #CED7F5;*/
-    }
     .end {
       text-align:end;
     }
@@ -182,7 +158,7 @@
       width: 100%;
       padding-top: 15px;
       padding-bottom: 15px;
-      cursor: pointer;
+      cursor: pointer !important;
     }
 
     .button-title {
@@ -256,17 +232,19 @@
       <!-- Footer -->
       <div class="footer">
         <div class="isotip center">
-          <a href="http://www.siggames.cat" target="_blank"><img alt="SIG Games" title="SIG Games · Web Page" src="https://raw.githubusercontent.com/SIGGames/Resources/main/Logotyping/Digital/PNG/3x/Isotip%20sobre%20blanc%403x.png"></a>
+          <a href="http://www.siggames.cat" target="_blank"><img alt="SIG Games" title="SIG Games · Web Page" src="https://raw.githubusercontent.com/SIGGames/Resources/main/Document%20Templates/mails/img/siggames-iso.png"></a>
         </div>
 
-        <div class="contact-icons center">
-          <a href="mailto:contact@siggames.cat" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" title="SIG Games · Email" width="32"></a>
-          <a href="https://discord.gg/XAQUEgqP7x" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670325.png" alt="Discord" title="SIG Games · Discord" width="32"></a>
-          <a href="https://github.com/SIGGames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="SIG Games · GitHub" width="32"></a>
-          <a href="https://www.linkedin.com/company/siggames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/4494/4494471.png" alt="LinkedIn" title="SIG Games · LinkedIn" width="32"></a>
-          <a href="https://www.instagram.com/siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png" alt="Instagram" title="SIG Games · Instagram" width="32"></a>
-          <a href="https://www.tiktok.com/@siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670299.png" alt="TikTok" title="SIG Games · TikTok" width="32"></a>
-        </div>
+        <table role="presentation" align="center" style="border-collapse: collapse; text-align: center; margin: 0 auto; margin-bottom: 10px;">
+          <tr>
+            <td style="padding: 7px;"><a href="mailto:contact@siggames.cat" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" title="SIG Games · Email" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://discord.gg/XAQUEgqP7x" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670325.png" alt="Discord" title="SIG Games · Discord" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://github.com/SIGGames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="SIG Games · GitHub" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.linkedin.com/company/siggames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/4494/4494471.png" alt="LinkedIn" title="SIG Games · LinkedIn" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.instagram.com/siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png" alt="Instagram" title="SIG Games · Instagram" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.tiktok.com/@siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670299.png" alt="TikTok" title="SIG Games · TikTok" width="32" style="display: block;"></a></td>
+          </tr>
+        </table>
 
         <span>Si no vols rebre més correus, clica <a href="#">aquí</a>  per desactivar la subscripció.</span><div></div>
         <span>Si tens alguna pregunta, envia'ns un missatge a <a class="mailto" href="mailto:contact@siggames.cat">contact@siggames.cat</a>.</span><div></div>
