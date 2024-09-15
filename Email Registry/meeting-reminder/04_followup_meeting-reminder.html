@@ -211,12 +211,12 @@
       <!-- Content: Introduction -->
       <div class="content">
         <span class="email-type center">Recordatori Reunió</span>
-        <span class="sprint">Follow-up Meeting (Sprint 3)</span>
+        <span class="sprint">Follow-up Meeting ({{lookupIssues.Sprint.name.first}})</span>
         <span class="sprint-date">{{now.format("dd/MM/yyyy")}}</span><div class="ds"></div>
 
         <strong>Bon dia,</strong><div class="ds"></div>
 
-        <span>Aquest missatge és un recordatori de la <i>Follow-up Meeting</i> (<i>Sprint</i> 3) del dilluns, {{now.format("dd/MM/yyyy")}}, a les <strong>18:00h</strong> en format presencial, a l'aula 2.02 de l'Escola Politècnica Superior del Campus de Cappont de la Universitat de Lleida (UdL).</span><div class="ds"></div>
+        <span>Aquest missatge és un recordatori de la <i>Follow-up Meeting</i> ({{lookupIssues.Sprint.name.first}}) del dijous, {{now.format("dd/MM/yyyy")}}, a les <strong>19:00h</strong> en format presencial, a l'aula 2.02 de l'Escola Politècnica Superior del Campus de Cappont de la Universitat de Lleida (UdL).</span><div class="ds"></div>
 
         <span>Una <i>follow-up meeting</i> és una reunió realitzada a la meitat de cada sprint per revisar els assoliments i el ritme de treball i tractar qualsevol problema o repte que pugui sorgir.</span><div class="ds"></div>
 
@@ -238,7 +238,7 @@
                 <tr><td><img alt="Hora" title="Time" src="https://raw.githubusercontent.com/SIGGames/Resources/main/Document%20Templates/mails/img/time-icon.png" width="100"></td></tr>
                 <tr><td><span class="card-title" style="text-align: center;">Data</span></td></tr>
                 <tr><td><strong>{{now.format("dd/MM/yyyy")}}</strong></td></tr>
-                <tr><td><span style="text-align: center;">18:00h - 21:00h</span></td></tr>
+                <tr><td><span style="text-align: center;">19:00h - 21:00h</span></td></tr>
               </table>
             </td>
         

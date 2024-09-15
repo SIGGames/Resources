@@ -211,13 +211,13 @@
       <!-- Content: Introduction -->
       <div class="content">
         <span class="email-type center">Recordatori Reunió</span>
-        <span class="sprint">Retrospective Meeting (Sprint 2)</span>
-        <span class="sprint">Planning Meeting (Sprint 3)</span>
+        <span class="sprint">Retrospective Meeting ({{lookupIssues.Sprint.name.first}})</span>
+        <span class="sprint">Planning Meeting</span>
         <span class="sprint-date">{{now.format("dd/MM/yyyy")}}</span><div class="ds"></div>
 
         <strong>Bon dia,</strong><div class="ds"></div>
 
-        <span>Aquest missatge és un recordatori de la <i>Retrospective Meeting</i> (<i>Sprint</i> 2) i de la <i>Planning Meeting</i> (<i>Sprint</i> 3) del dilluns, {{now.format("dd/MM/yyyy")}}, a les <strong>18:00h</strong> en format presencial, a l'aula 2.02 de l'Escola Politècnica Superior del Campus de Cappont de la Universitat de Lleida (UdL).</span><div class="ds"></div>
+        <span>Aquest missatge és un recordatori de la <i>Retrospective Meeting</i> ({{lookupIssues.Sprint.name.first}}) i de la <i>Planning Meeting</i> del següent sprint del dijous, {{now.format("dd/MM/yyyy")}}, a les <strong>19:00h</strong> en format presencial, a l'aula 2.02 de l'Escola Politècnica Superior del Campus de Cappont de la Universitat de Lleida (UdL).</span><div class="ds"></div>
 
         <span>Una <i>retrospective meeting</i> és una reunió realitzada al final de cada sprint per reflexionar sobre què ha sortit bé i malament i quines lliçons s'han aprés, amb l'objectiu d'identificar àrees de millora i desenvolupar plans d'acció per futures iteracions.</span><div class="ds"></div>
 
@@ -241,8 +241,8 @@
                 <tr><td><img alt="Hora" title="Time" src="https://raw.githubusercontent.com/SIGGames/Resources/main/Document%20Templates/mails/img/time-icon.png" width="100"></td></tr>
                 <tr><td><span class="card-title" style="text-align: center;">Data</span></td></tr>
                 <tr><td><strong>{{now.format("dd/MM/yyyy")}}</strong></td></tr>
-                <tr><td><span style="text-align: center;">18:00h - 19:30h (<i>Retrospective</i>)</span></td></tr>
-                <tr><td><span style="text-align: center;">19:30h - 21:00h (<i>Planning</i>)</span></td></tr>
+                <tr><td><span style="text-align: center;">19:00h - 20:00h (<i>Retrospective</i>)</span></td></tr>
+                <tr><td><span style="text-align: center;">20:00h - 21:00h (<i>Planning</i>)</span></td></tr>
               </table>
             </td>
         
