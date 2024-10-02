@@ -116,7 +116,24 @@
       outline: none !important;
       background-color: #8298E32A !important;
     }
-    
+    button {
+      background-color: #8298E3;
+      color: #FFFFFF;
+      font-weight: bold;
+      font-family: Montserrat, Arial, sans-serif;
+      font-size: 15px;
+      border: 1px solid #8298E3;
+      border-radius: 5px;
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      cursor: pointer !important;
+    }
+    .button-title {
+        font-weight: bold;
+        font-size: 1.2em !important;
+        text-align: center !important;
+    }
     .isotip {
       padding-top: 15px;
       padding-bottom: 10px;
@@ -155,6 +172,9 @@
       text-align: start;
       border-top: 1px solid #C2CDF0;
       /*border-bottom: 1px solid #CED7F5;*/
+    }
+    .tab {
+      padding-left: 30px;
     }
     .end {
       text-align:end;
@@ -379,9 +399,23 @@
         <span class="card-title">Discussions d'equip</span>
         <span class="card-subtitle">Equip SIG Games - <i>Sprint 3</i> (01/09/2024 - 30/09/2024)</span><div class="ds"></div>
 
-        <span><li>La mecànica "climb" és necessària?</li></span>
-        <span><li>El control per la mecànica "crouch" hauria de ser Ctrl. enlloc de "S" o "&#8595;"?</li></span>
+        <span>Aquí es llisten els temes de discussió que han aparegut juntament amb la seva ressolució, tot de forma molt resumida:</span><div class="ds"></div>
+
+        <span><li>La mecànica "climb" és necessària? <strong>Sí, molt.</strong></li></span>
+        <span><li>El control per la mecànica "crouch" hauria de ser Ctrl. enlloc de "S" o "&#8595;"? <strong>Potser sí, quan es pugui provar el joc es decidirà.</strong></li></span>
         <span><li>...</li></span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Estructuració per herència</span>
+        <span class="card-subtitle">Aniol Serrano - <i>Follow-up Meeting</i> (12/08/2024)</span><div class="ds"></div>
+
+        <span>Després de proposar utilitzar l'estructuració per herència per implementar les mecàniques de tots els personatges, al intentar-ho s'ha vist que Unity no permet assignar classes abstractes als personatges del videojoc, fent impossible aquesta estructuració del codi.</span><div class="ds"></div>
+
+        <span>En canvi, s'ha seguit una estructuració basada en la parametrització on s'ha creat el <i>script</i> Player Controller per poder alterar les variables fàcilment per fer proves a Unity i adaptar els paràmetres a cada personatge.</span>
       </div>
 
       <div class="divider"></div>
@@ -452,70 +486,9 @@
       <!-- Content -->
       <div class="content">
         <span class="card-title">Fira IndieDevDay 2024</span>
-        <span class="card-subtitle">Equip SIG Games - <i>Daily Meeting</i> (30/09/2024)</span><div class="ds"></div>
+        <span class="card-subtitle">Equip SIG Games - <i>IndieDevDay 2024</i> (27/09/2024 - 28/09/2024)</span><div class="ds"></div>
 
-        <span>Assistir a la fira IndieDevDay ha estat molt útil per l'equip de desenvolupament:</span><div class="ds"></div>
-
-        <span><li>...</li></span><div class="ds"></div>
-
-        <table class="table">
-          <tr>
-            <th colspan="2" class="table-head">Resum despeses d'empresa</th>
-          </tr>
-          <tr>
-            <td class="table-head">Abel Pérez Salvia</td>
-            <td class="table-head end">71,10 €</td>
-          </tr>
-            <tr>
-              <td class="table-rows" style=""><tt>Transport (cotxe)</tt></td>
-              <td class="table-rows end"><tt>50,00 €</tt></td>
-            </tr>
-            <tr>
-              <td class="table-rows"><tt>Menjar (dinar)</tt></td>
-              <td class="table-rows end"><tt>13,95 €</tt></td>
-            </tr>
-            <tr>
-              <td class="table-rows"><tt>Menjar (sopar)</tt></td>
-              <td class="table-rows end"><tt>07,15 €</tt></td>
-            </tr>
-
-          <tr>
-            <td class="table-head">Aniol Serrano Ortega</td>
-            <td class="table-head end">21,65 €</td>
-          </tr>
-            <tr>
-              <td class="table-rows"><tt>Menjar (dinar)</tt></td>
-              <td class="table-rows end"><tt>13,95 €</tt></td>
-            </tr>
-            <tr>
-              <td class="table-rows"><tt>Menjar (sopar)</tt></td>
-              <td class="table-rows end"><tt>07,70 €</tt></td>
-            </tr>
-
-          <tr>
-            <td class="table-head">Júlia Nogales López</td>
-            <td class="table-head end">36,50 €</td>
-          </tr>
-            <tr>
-              <td class="table-rows"><tt>Transport (metro)</tt></td>
-              <td class="table-rows end"><tt>11,20 €</tt></td>
-            </tr>
-            <tr>
-              <td class="table-rows"><tt>Menjar (dinar)</tt></td>
-              <td class="table-rows end"><tt>15,40 €</tt></td>
-            </tr>
-            <tr>
-              <td class="table-rows"><tt>Menjar (sopar)</tt></td>
-              <td class="table-rows end"><tt>09,90 €</tt></td>
-            </tr>
-
-          <tr>
-            <th class="table-head">TOTAL</td>
-            <th class="table-head end">129,25 €</td>
-          </tr>
-        </table>
-
-        <span></span>
+        <span>En la pròxima newsletter es comentarà detalladament l'esdeveniment al que va assistir l'equip de desenvolupament el passat 27 i 28 de setembre, l'IndieDevDay 2024, què va aportar per l'equip i les despeses ocasionades.</span>
       </div>
 
       <div class="divider"></div>
@@ -526,6 +499,15 @@
         <span class="card-subtitle">[Author] - <i>[Meeting]</i> [(DD/MM/YYYY)]</span><div class="ds"></div>
 
         <span>[Content]</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- More info content -->
+      <div class="content">
+        <span class="button-title">Per consultar newsletters anteriors</span><div class="ds"></div>
+        
+        <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/00_newsletter-devteam-compilation.html" title="Tauler sprint actiu SIG Games · Jira"><button>Clica aquí</button></a>
       </div>
 
       <!-- Footer -->
