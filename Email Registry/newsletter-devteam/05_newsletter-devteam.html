@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Newsletter DevTeam</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F1F2F2;
+      font-family: Montserrat, Arial, sans-serif;
+    }
+
+    .email-wrapper {
+      background-color: #F1F2F2;
+      padding-bottom: 15px;
+    }
+
+    .init-divider {
+      background-color: white;
+      padding: 5px;
+      border: 1px solid #F1F2F2;
+    }
+
+    .divider {
+      background-color: #F1F2F2;
+      padding: 5px;
+    }
+
+    .ds {
+      padding: 9px;
+    }
+
+    .email-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+      /*border: 1px solid #dddddd;*/
+      overflow: hidden;
+    }
+
+    .header {
+      background-color: #F1F2F2;
+      color: #684B9F;
+      padding: 20px;
+      text-align: center;
+      font-family: Cocon, Arial, sans-serif;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 3.5em;
+    }
+    .header img {
+      max-width: 100%;
+    }
+
+    .content {
+      padding: 35px;
+      color: #333132;
+      border: 1px solid #F1F2F2;
+    }
+    .content span, strong {
+      font-size: 15px;
+      line-height: 1.75;
+      text-align: justify;
+    }
+    .content span {
+      display: block;
+    }
+
+    .card-title {
+      color: #8298E3;
+      font-weight: bold;
+    }
+    .card-subtitle {
+      font-style: italic;
+      font-size: 13px !important;
+    }
+
+    .email-type {
+      color: #8298E3;
+      font-size: 1.7em !important;
+      font-weight: bold;
+      text-align: center !important;
+      font-family: Cocon, Arial, sans-serif;
+    }
+
+    .mailto {
+      color: #777777 !important;
+      text-decoration: underline !important;
+    }
+    .mailto:hover {
+      color: #333132 !important;
+    }
+
+    .footer {
+      background-color: #F1F2F2;
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #777777;
+    }
+    a {
+      color: #8298E3 !important;
+      text-decoration: none !important;
+    }
+    a:hover {
+      text-decoration: underline !important;
+      color: #8298E3 !important;
+    }
+    a:focus {
+      outline: none !important;
+      background-color: #8298E32A !important;
+    }
+    button {
+      background-color: #8298E3;
+      color: #FFFFFF;
+      font-weight: bold;
+      font-family: Montserrat, Arial, sans-serif;
+      font-size: 15px;
+      border: 1px solid #8298E3;
+      border-radius: 5px;
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      cursor: pointer !important;
+    }
+    .button-title {
+        font-weight: bold;
+        font-size: 1.2em !important;
+        text-align: center !important;
+    }
+    .isotip {
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+    .isotip img {
+      max-width: 100%;
+      height: auto;
+      width: 15%;
+    }
+
+    .contact-icons {
+      padding-bottom: 20px;
+      gap: 15px;
+    }
+
+    table {
+      border-spacing: 0px !important;
+      border-collapse: collapse !important;
+    }
+
+    .table {
+      border: 1px solid #8298E3;
+      width: 100%;
+    }
+    .table-head {
+      padding: 15px;
+      text-align: start;
+      border-bottom: 1px solid #8298E3 !important;
+      border-top: 1px solid #8298E3 !important;
+    }
+    .table-rows {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      text-align: start;
+      border-top: 1px solid #C2CDF0;
+      /*border-bottom: 1px solid #CED7F5;*/
+    }
+    .tab {
+      padding-left: 30px;
+    }
+    .end {
+      text-align:end;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+    }
+
+    code {
+      background-color: #E0E0E0;
+      border-radius: 3px;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    /*
+    li {
+      text-align: start;
+    }
+    */ 
+    .sprint {
+        text-align: center !important;
+        font-size: 1.4em !important;
+        font-weight: bold;
+    }
+    
+    .sprint-date {
+        text-align: center !important;
+        font-size: 1.1em !important;
+        padding-bottom: 20px;
+    }
+
+    tt {
+      font-size: 16px;
+    }
+
+    .results-row {
+      background-color: #F1F2F2;
+      display: flex;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .res {
+      padding-bottom: 15px !important;
+      padding-top: 15px !important;
+      position: relative;
+      cursor: help;
+    }
+    .results-1 {
+      background-color: #C1E6D5;
+      border: solid 1px white;
+    }
+    .results-1:hover {
+      border: 1px solid #868586;
+      border-radius: 3px;
+    }
+    .results-2 {
+      background-color: #C2CDF0;
+      border: solid 1px white;
+    }
+    .results-2:hover {
+      border: 1px solid #868586;
+      border-radius: 3px;
+    }
+    .results-3 {
+      background-color: #FFC1BC;
+      border: solid 1px white;
+    }
+    .results-3:hover {
+      border: 1px solid #868586;
+      border-radius: 3px;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      white-space: nowrap;
+    }
+    .results-1:hover .tooltip, .results-2:hover .tooltip, .results-3:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+    .legend-item:last-child {
+      margin-right: 0;
+    }
+    .legend-color {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+      border: 1px solid #777;
+      border-radius: 2px;
+    }
+    .legend-color-1 {
+      background-color: #C1E6D5;
+    }
+    .legend-color-2 {
+      background-color: #C2CDF0;
+    }
+    .legend-color-3 {
+      background-color: #FFC1BC;
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+  </style>
+</head>
+
+
+<body>
+.  <div class="email-wrapper">
+    <div class="email-container">
+      <div class="init-divider"></div>
+      <!-- Header -->
+      <div class="header">
+        <a href="http://www.siggames.cat" target="_blank"><img alt="SIG Games" title="SIG Games · Web Page" src="https://raw.githubusercontent.com/SIGGames/Resources/main/Logotyping/Digital/PNG/3x/Logotip%20sobre%20blanc%403x.png"></a>
+      </div>
+
+      <!-- Content: Introduction -->
+      <div class="content">
+        <span class="email-type center">Newsletter DevTeam</span>
+        <span class="sprint"></span>
+        <span class="sprint-date">30/09/2024</span><div class="ds"></div>
+
+        <strong>Bona nit,</strong><div class="ds"></div>
+
+        <span>El passat cap de setmana l'equip de desenvolupament va assistir a la Fira del Videojoc Independent 7a Edició a Barcelona, també coneguda com "<a href="https://www.indiedevday.es/ca/">IndieDevDay 2024</a>".</span><div class="ds"></div>
+        
+        <strong>SIG Games</strong>
+      </div>
+
+      <div class="divider"></div>
+
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Despeses IndieDevDay 2024</span>
+        <span class="card-subtitle">Equip SIG Games - <i>Daily Meeting</i> (30/09/2024)</span><div class="ds"></div>
+
+        <table class="table">
+          <tr>
+            <th colspan="2" class="table-head">Resum despeses d'empresa</th>
+          </tr>
+          <tr>
+            <td class="table-head">Abel Pérez Salvia</td>
+            <td class="table-head end">> 71,10 €</td>
+          </tr>
+            <tr>
+              <td class="table-rows tab"><tt>Transport (cotxe)</tt></td>
+              <td class="table-rows end"><tt>50,00 €</tt></td>
+            </tr>
+            <tr></tr>
+              <td class="table-rows tab"><tt>Menjar (dinar div.)</tt></td>
+              <td class="table-rows end"><tt>¿? €</tt></td>
+            </tr>
+            <tr>
+              <td class="table-rows tab"><tt><a href="">Menjar (dinar dis.)</a></tt></td>
+              <td class="table-rows end"><tt>13,95 €</tt></td>
+            </tr>
+            <tr>
+              <td class="table-rows tab"><tt>Menjar (sopar dis.)</tt></td>
+              <td class="table-rows end"><tt>07,15 €</tt></td>
+            </tr>
+
+          <tr>
+            <td class="table-head">Aniol Serrano Ortega</td>
+            <td class="table-head end">21,65 €</td>
+          </tr>
+            <tr>
+              <td class="table-rows tab"><tt><a href="https://raw.githubusercontent.com/SIGGames/Resources/main/Bills/indiedevday_aniol_dinar.jpg">Menjar (dinar dis.)</a></tt></td>
+              <td class="table-rows end"><tt>13,95 €</tt></td>
+            </tr>
+            <tr>
+              <td class="table-rows tab"><tt><a href="https://raw.githubusercontent.com/SIGGames/Resources/main/Bills/indiedevday_aniol_sopar.jpg">Menjar (sopar dis.)</a></tt></td>
+              <td class="table-rows end"><tt>07,70 €</tt></td>
+            </tr>
+
+          <tr>
+            <td class="table-head">Júlia Nogales López</td>
+            <td class="table-head end">51,51 €</td>
+          </tr>
+            <tr>
+              <td class="table-rows tab"><tt><a href="https://raw.githubusercontent.com/SIGGames/Resources/main/Bills/indiedevday_julia_metro.jpg">Transport (metro)</a></tt></td>
+              <td class="table-rows end"><tt>11,20 €</tt></td>
+            </tr>
+            <tr>
+              <td class="table-rows tab"><tt><a href="https://raw.githubusercontent.com/SIGGames/Resources/main/Bills/indiedevday_julia_dinar-1.jpg">Menjar (dinar div.)</a></tt></td>
+              <td class="table-rows end"><tt>15,01 €</tt></td>
+            </tr>
+            <tr>
+              <td class="table-rows tab"><tt><a href="https://raw.githubusercontent.com/SIGGames/Resources/main/Bills/indiedevday_julia_dinar-2.jpg">Menjar (dinar dis.)</a></tt></td>
+              <td class="table-rows end"><tt>15,40 €</tt></td>
+            </tr>
+            <tr>
+              <td class="table-rows tab"><tt><a href="https://raw.githubusercontent.com/SIGGames/Resources/main/Bills/indiedevday_julia_sopar.jpg">Menjar (sopar dis.)</a></tt></td>
+              <td class="table-rows end"><tt>09,90 €</tt></td>
+            </tr>
+
+          <tr>
+            <th class="table-head">TOTAL</td>
+            <th class="table-head end">> 144,26 €</td>
+          </tr>
+        </table>
+
+        <span></span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">[Title]</span>
+        <span class="card-subtitle">[Author] - <i>[Meeting]</i> [(DD/MM/YYYY)]</span><div class="ds"></div>
+
+        <span>[Content]</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- More info content -->
+      <div class="content">
+        <span class="button-title">Per consultar newsletters anteriors</span><div class="ds"></div>
+        
+        <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/00_newsletter-devteam-compilation.html" title="Tauler sprint actiu SIG Games · Jira"><button>Clica aquí</button></a>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="isotip center">
+          <a href="http://www.siggames.cat" target="_blank"><img alt="SIG Games" title="SIG Games · Web Page" src="https://raw.githubusercontent.com/SIGGames/Resources/main/Document%20Templates/mails/img/siggames-iso.png"></a>
+        </div>
+
+        <table role="presentation" align="center" style="border-collapse: collapse; text-align: center; margin: 0 auto; margin-bottom: 10px;">
+          <tr>
+            <td style="padding: 7px;"><a href="mailto:contact@siggames.cat" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" alt="Email" title="SIG Games · Email" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://discord.gg/XAQUEgqP7x" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670325.png" alt="Discord" title="SIG Games · Discord" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://github.com/SIGGames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="SIG Games · GitHub" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.linkedin.com/company/siggames" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/4494/4494471.png" alt="LinkedIn" title="SIG Games · LinkedIn" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.instagram.com/siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png" alt="Instagram" title="SIG Games · Instagram" width="32" style="display: block;"></a></td>
+            <td style="padding: 7px;"><a href="https://www.tiktok.com/@siggames.official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670299.png" alt="TikTok" title="SIG Games · TikTok" width="32" style="display: block;"></a></td>
+          </tr>
+        </table>
+
+        <span>Si no vols rebre més correus, clica <a href="#">aquí</a>  per desactivar la subscripció.</span><div></div>
+        <span>Si tens alguna pregunta, envia'ns un missatge a <a class="mailto" href="mailto:contact@siggames.cat">contact@siggames.cat</a>.</span><div></div>
+        <span>&copy; 2024 SIG Games. Tots els drets reservats.</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
