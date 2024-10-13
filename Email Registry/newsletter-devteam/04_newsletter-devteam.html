@@ -332,7 +332,7 @@
 
         <strong>Bona nit,</strong><div class="ds"></div>
 
-        <span>En l'última reunió d'equip "<i>Daily, Retrospective & Planning</i> (<i>Sprint</i> 3) del dijous 26 de setembre, juntament amb la resta de reunions dutes a terme durant aquest sprint, s'han discutit diversos temes que es comenten en aquesta <i>newsletter</i>.</span><div class="ds"></div>
+        <span>En l'última reunió d'equip "<i>Daily, Retrospective & Planning</i> (<i>Sprint</i> 3)" del dijous 26 de setembre, juntament amb la resta de reunions dutes a terme durant aquest sprint, s'han discutit diversos temes que es comenten en aquesta <i>newsletter</i>.</span><div class="ds"></div>
           
         <span>Com que aquest mes de setembre no hi ha hagut cap actualització sobre el desenvolupament del videojoc o de l'empresa, en aquest correu es fa una "breu" recopilació de tot el que s'ha comentat en les reunions anteriors, des de l'1 de setembre fins l'actualitat.</span><div class="ds"></div>
 
@@ -401,9 +401,8 @@
 
         <span>Aquí es llisten els temes de discussió que han aparegut juntament amb la seva ressolució, tot de forma molt resumida:</span><div class="ds"></div>
 
-        <span><li>La mecànica "climb" és necessària? <strong>Sí, molt.</strong></li></span>
+        <span><li>La mecànica "climb" és necessària? <strong>Sí, vital pel disseny de nivells.</strong></li></span>
         <span><li>El control per la mecànica "crouch" hauria de ser Ctrl. enlloc de "S" o "&#8595;"? <strong>Potser sí, quan es pugui provar el joc es decidirà.</strong></li></span>
-        <span><li>...</li></span>
       </div>
 
       <div class="divider"></div>
@@ -415,7 +414,70 @@
 
         <span>Després de proposar utilitzar l'estructuració per herència per implementar les mecàniques de tots els personatges, al intentar-ho s'ha vist que Unity no permet assignar classes abstractes als personatges del videojoc, fent impossible aquesta estructuració del codi.</span><div class="ds"></div>
 
-        <span>En canvi, s'ha seguit una estructuració basada en la parametrització on s'ha creat el <i>script</i> Player Controller per poder alterar les variables fàcilment per fer proves a Unity i adaptar els paràmetres a cada personatge.</span>
+        <span>En canvi, s'ha seguit una estructura basada en la parametrització, on s'ha creat el <i>script</i> Player Controller per poder alterar les variables fàcilment, fer proves a Unity i adaptar els paràmetres a cada personatge.</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Implementació a Unity</span>
+        <span class="card-subtitle">Aniol Serrano - <i>Daily Meeting</i> (14/08/2024)</span><div class="ds"></div>
+
+        <span>Han sorgit problemes per assignar els botons del comandament a Unity. De moment només s'assignaran les tecles del teclat i es deixarà com a tasca futura.</span><div class="ds"></div>
+
+        <span>Queda pendent dessignar la ressolució de pantalla corresponent als videojocs pixel-art → ¿...?</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Game Testers</span>
+        <span class="card-subtitle">Júlia Nogales - <i>Daily Meeting</i> (14/08/2024)</span><div class="ds"></div>
+
+        <span>Cal crear un document o formulari per recollir el <i>feedback</i> dels <i>testers</i>, tant dels interns (equip desenvolupament SIG Games) com dels externs (tutors, amics, familiars, etc.), i començar a ficar-lo a prova quan les mecàniques inicials estiguin implementades i s'hagin incorporat les animacions del personatge.</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Automatitzacions Jira</span>
+        <span class="card-subtitle">Júlia Nogales - <i>Daily Meeting</i> (14/08/2024)</span><div class="ds"></div>
+
+        <span>S'ha automatitzat l'enviament de correus recordatori (de tasques i de reunions) pel Jira i el seu contingut (dates, sprint actual i tasques assignades).</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Nou compte de Google</span>
+        <span class="card-subtitle">Júlia Nogales - <i>Daily Meeting</i> (14/08/2024)</span><div class="ds"></div>
+
+        <span>S'ha creat un compte personal "d'empresa" de SIG Games a Google (siggames.official@gmail.com) per poder gaudir dels serveis de Google Calendar i YouTube sense pagar els costos que implica un compte d'empresa.</span><div class="ds"></div>
+
+        <span>Aprofitant el servei de Calendar, es crearà un calendari de SIG Games on s'afegiran els esdeveniments de l'equip de desenvolupament (reunions, sprints, etc.) i on s'adjuntaran els logs de les reunions al finalitzar-les. En un futur es crearà un calendari per als "clients" o interessats on es mostraran els esdeveniments públics o dates significatives pel projecte i per l'estudi.</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Progrés disseny artístic: Micca</span>
+        <span class="card-subtitle">Abel Pérez - <i>Daily Meeting</i> (14/08/2024)</span><div class="ds"></div>
+
+        <span>Partint de la descripció donada del personatge Micca, la mare del Paco, s'està intentant trobar un disseny que transmeti ser una mare amorosa, lleugerament embarassada, tranquila i pacífica, però alhora que tingui molts coneixements en arts marcials i sigui capaç tant d'atacar com de defensar.</span><div class="ds"></div>
+
+        <span>Estava comportant més temps de l'esperat perquè no es tenia una visió clara sobre com es volia dissenyar la Micca i no s'aconseguia trobar el punt mig entre "mare amorosa" i "experta en arts marcials". Finalment, quan ja es va trobar, només quedava corregir un petit problema de diferenciació entre colors per obtenir la nostra protagonista de la "demo":</span>
+
+        <div style="display: flex; justify-content: space-between; position: relative;">
+          <img src="https://raw.githubusercontent.com/SIGGames/ArtDevelopment/main/final-assets/micca-peaceful.png" style="width: 40%;">
+        <img src="https://raw.githubusercontent.com/SIGGames/ArtDevelopment/main/final-assets/micca.png" style="width: 60%;">
+        </div><div class="ds"></div>
+
+        
       </div>
 
       <div class="divider"></div>
@@ -493,21 +555,11 @@
 
       <div class="divider"></div>
 
-      <!-- Content -->
-      <div class="content">
-        <span class="card-title">[Title]</span>
-        <span class="card-subtitle">[Author] - <i>[Meeting]</i> [(DD/MM/YYYY)]</span><div class="ds"></div>
-
-        <span>[Content]</span>
-      </div>
-
-      <div class="divider"></div>
-
       <!-- More info content -->
       <div class="content">
         <span class="button-title">Per consultar newsletters anteriors</span><div class="ds"></div>
         
-        <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/00_newsletter-devteam-compilation.html" title="Tauler sprint actiu SIG Games · Jira"><button>Clica aquí</button></a>
+        <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/00_newsletter-devteam-compilation.html" title="Compilació newsletters SIG Games"><button>Clica aquí</button></a>
       </div>
 
       <!-- Footer -->
