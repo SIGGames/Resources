@@ -346,7 +346,7 @@
 
         <strong>Bona nit,</strong><div class="ds"></div>
 
-        <span>....</span><div class="ds"></div>
+        <span>...</span><div class="ds"></div>
         
         <strong>SIG Games</strong>
       </div>
@@ -355,10 +355,58 @@
 
       <!-- Content -->
       <div class="content">
-        <span class="card-title">[...]</span>
-        <span class="card-subtitle"><i>[...]</i> - <i>Daily Meeting</i> (02/10/2024)</span><div class="ds"></div>
+        <span class="card-title">Animació "idle"</span>
+        <span class="card-subtitle"><i>Abel Pérez</i> - <i>Daily Meeting</i> (02/10/2024)</span><div class="ds"></div>
 
-        <span>...</span>
+        <span>S'ha presentat la primera versió de l'animació del personatge Micca en estat "idle":</span><div class="ds"></div>
+
+        <img src="https://raw.githubusercontent.com/SIGGames/ArtDevelopment/main/animations-dev/dev-gif/micca-peaceful-walk-v4.gif" style="width: 100%;"><div class="ds"></div>
+        <span style="text-align: center; font-size: small;"><i>Animació Micca "idle" - Versió 1</i></span><div class="ds"></div>
+
+        <span>S'ha observat que la cua es movia massa i acaparava tota l'atenció, així que s'ha proposat que el moviment sigui més subtil, donant com a resultat final la següent animació:</span><div class="ds"></div>
+
+        <img src="https://raw.githubusercontent.com/SIGGames/ArtDevelopment/main/animations-dev/dev-gif/micca-peaceful-walk-v4.gif" style="width: 100%;"><div class="ds"></div>
+        <span style="text-align: center; font-size: small;"><i>Animació Micca "idle" - Versió final</i></span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Implementació inicial mecànica "climb"</span>
+        <span class="card-subtitle"><i>Aniol Serrano</i> - <i>Daily Meeting</i> (02/10/2024)</span><div class="ds"></div>
+
+        <span>S'ha mostrat la primera versió de la mecànica "climb". No és una versió estable ja que presenta molts <i>bugs</i> (alguns crítics) i no implementa correctament les característiques definides.</span><div class="ds"></div>
+
+        <span><li>S'activa el "climb" al passar per davant de l'element escalable.</li></span>
+        <span><li>Patina/cau enlloc de mantenir-se en una posició fixa.</li></span>
+        <span><li>Ignora el terra i segueix baixant fins morir.</li></span>
+        <span><li>Després de sortir de l'element escalable no para de saltar.</li></span>
+        <span><li>Permet el moviment horitzontal.</li></span><div class="ds"></div>
+
+        <img src="" style="width: 100%;"><div class="ds"></div>
+
+        <span>La següent versió soluciona tots els problemes de l'anterior, però encara presenta alguns punts de millora que caldrà corregir en la pròxima iteració:</span><div class="ds"></div>
+
+        <span><li>Paràmetres (velocitat "climb") pendents d'ajustar.</li></span>
+        <span><li>Quan es pressiona la tecla de desplaçament lateral (← o →) cau enlloc d'encarar-se.</li></span>
+        <span><li>No permet saltar mentre escala.</li></span>
+        <span><li>No hi ha límit on es freni el descens o ascens, sinó que cau.</li></span>
+        <span><li>No es transforma la posició del personatge al centre de l'element quan escala.</li></span><div class="ds"></div>
+
+        <img src="" style="width: 100%;">
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Canvi personatge Micca - [main-boss]</span>
+        <span class="card-subtitle"><i>Júlia Nogales</i> - <i>Follow-up Meeting</i> (03/10/2024)</span><div class="ds"></div>
+
+        <span>S'ha proposat una idea pel combat final de la "demo" que s'extrapola a tot el videojoc per reforçar les emocions que vol transmetre la narrativa:</span><div class="ds"></div>
+
+        <span></span>
       </div>
 
       <div class="divider"></div>
