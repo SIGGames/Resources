@@ -408,19 +408,7 @@
         <span><li>Quants NPCs es poden crear? <strong>Entre 20 i 40.</strong></li></span>
         <span><li>El "parry" està sobrepotenciat? <strong>Sí, es modificarà a "parry" convencional i l'actual serà una habilitat/objecte del futur.</strong></li></span>
         <span><li>Existeix la màgia en aquest univers? <strong>Potser sí, en la narrativa es definirà.</strong></li></span>
-        <span><li>S'hauria d'evitar assignar noms provisionals als personatges (p.e. enlloc de [Koba] → [big-boss])? <strong>Sí, evita confusions.</strong></li></span>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Content -->
-      <div class="content">
-        <span class="card-title">Estructuració per herència</span>
-        <span class="card-subtitle">Aniol Serrano - <i>Follow-up Meeting</i> (12/09/2024)</span><div class="ds"></div>
-
-        <span>Després de proposar utilitzar l'estructuració per herència per implementar les mecàniques de tots els personatges, al intentar-ho s'ha vist que Unity no permet assignar classes abstractes als personatges del videojoc, fent impossible aquesta estructuració del codi.</span><div class="ds"></div>
-
-        <span>En canvi, s'ha seguit una estructura basada en la parametrització, on s'ha creat el <i>script</i> Player Controller per poder alterar les variables fàcilment, fer proves a Unity i adaptar els paràmetres a cada personatge.</span>
+        <span><li>S'hauria d'evitar assignar noms provisionals als personatges (p.e. enlloc de [Koba] → [main-boss])? <strong>Sí, evita confusions.</strong></li></span>
       </div>
 
       <div class="divider"></div>
@@ -428,11 +416,25 @@
       <!-- Content -->
       <div class="content">
         <span class="card-title">Implementació a Unity</span>
-        <span class="card-subtitle">Aniol Serrano - <i>Daily Meeting</i> (14/09/2024)</span><div class="ds"></div>
+        <span class="card-subtitle">Aniol Serrano - <i>Daily Meeting</i> (12/09/2024)</span><div class="ds"></div>
+
+        <span>Després de crear l'entorn a Unity mitjançant una plantilla de videojocs que s'ofereix per defecte, s'han començat a implementar les mecàniques del videojoc.</span><div class="ds"></div>
 
         <span>Han sorgit problemes per assignar els botons del comandament a Unity. De moment només s'assignaran les tecles del teclat i es deixarà com a tasca futura.</span><div class="ds"></div>
 
         <span>Queda pendent dessignar la ressolució de pantalla corresponent als videojocs pixel-art i el seu "frame-rate".</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <span class="card-title">Estructuració per herència</span>
+        <span class="card-subtitle">Aniol Serrano - <i>Follow-up Meeting</i> (14/09/2024)</span><div class="ds"></div>
+
+        <span>Després de proposar utilitzar l'estructuració per herència per implementar les mecàniques de tots els personatges, al intentar-ho s'ha vist que Unity no permet assignar classes abstractes als personatges del videojoc, fent impossible aquesta estructuració del codi.</span><div class="ds"></div>
+
+        <span>En canvi, s'ha seguit una estructura basada en la parametrització, on s'ha creat el <i>script</i> Player Controller per poder alterar les variables fàcilment, fer proves a Unity i adaptar els paràmetres a cada personatge.</span>
       </div>
 
       <div class="divider"></div>
@@ -500,7 +502,7 @@
           <img src="https://raw.githubusercontent.com/SIGGames/ArtDevelopment/main/final-assets/micca-peaceful.png" style="width: 40%;">
           <img src="https://raw.githubusercontent.com/SIGGames/ArtDevelopment/main/final-assets/micca.png" style="width: 60%;">
         </div><div class="ds"></div>
-        <span style="text-align: center; font-size: small;"><i>Micca [idle] abans i durant l'atac, respectivament.</i></span><div class="ds"></div>
+        <span style="text-align: center; font-size: small;"><i>Micca "idle" abans i durant l'atac, respectivament.</i></span><div class="ds"></div>
 
         <span><strong>Animació:</strong></span>
         <span>Cal definir les duracions de les animacions d'atac de la Micca (i de tots els personatges de combat): <i>stand-by</i>, preparació, atac i <i>throwback</i>, i com aquestes s'unifiquen entre els diferents atacs.</span><div class="ds"></div>
@@ -606,7 +608,7 @@
         <span>Aquest sprint es centra en la creació i implementació dels enemics de la fase inicial/tutorial del videojoc, juntament amb la finalització de les tasques que s'han quedat pendents del sprint anterior i algunes tasques extres.</span><div class="ds"></div>
 
         <span>Les tasques principals de cada membre son:</span>
-        <span><li>Abel: animacions Micca (idle, walk, jump-1) i disseny [big-boss].</li></span>
+        <span><li>Abel: animacions Micca (idle, walk, jump-1) i disseny [main-boss].</li></span>
         <span><li>Aniol: finalitzar implementació mecàniques (climb, hold, jump, ...) i tests unitaris.</li></span>
         <span><li>Júlia: definir enemics, narrativa global i interfície (sistema de vida).</li></span>
       </div>
