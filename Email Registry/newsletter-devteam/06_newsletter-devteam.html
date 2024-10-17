@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
+  <!-- Metadades Open Graph per personalitzar la previsualització a Discord -->
+  <meta property="og:title" content="#06 Newsletter DevTeam - SIG Games">
+  <meta property="og:description" content="Descobreix les últimes novetats de l'equip de SIG Games, l'estudi independent de desenvolupament de videojocs, amb la nostra newsletter.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/SIGGames/Resources/main/Logotyping/Digital/PNG/3x/Logotip%20sobre%20blanc%403x.png">
+  <meta property="og:url" content="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/05_newsletter-devteam.html">
+  <meta property="og:type" content="website">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet" type="text/css">
@@ -116,7 +123,31 @@
       outline: none !important;
       background-color: #8298E32A !important;
     }
-    
+    .no-style {
+      color: #333132 !important;
+    }
+    .no-style:hover {
+      color: #333132 !important;
+      font-weight: bold;
+    }
+    button {
+      background-color: #8298E3;
+      color: #FFFFFF;
+      font-weight: bold;
+      font-family: Montserrat, Arial, sans-serif;
+      font-size: 15px;
+      border: 1px solid #8298E3;
+      border-radius: 5px;
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      cursor: pointer !important;
+    }
+    .button-title {
+        font-weight: bold;
+        font-size: 1.2em !important;
+        text-align: center !important;
+    }
     .isotip {
       padding-top: 15px;
       padding-bottom: 10px;
@@ -156,6 +187,9 @@
       border-top: 1px solid #C2CDF0;
       /*border-bottom: 1px solid #CED7F5;*/
     }
+    .tab {
+      padding-left: 30px;
+    }
     .end {
       text-align:end;
     }
@@ -191,14 +225,105 @@
     tt {
       font-size: 16px;
     }
-    ul {
-      list-style-type: disc;
+
+    .results-row {
+      background-color: #F1F2F2;
+      display: flex;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .res {
+      padding-bottom: 15px !important;
+      padding-top: 15px !important;
+      position: relative;
+      cursor: help;
+    }
+    .results-1 {
+      background-color: #C1E6D5;
+      border: solid 1px white;
+    }
+    .results-1:hover {
+      border: 1px solid #868586;
+      border-radius: 3px;
+    }
+    .results-2 {
+      background-color: #C2CDF0;
+      border: solid 1px white;
+    }
+    .results-2:hover {
+      border: 1px solid #868586;
+      border-radius: 3px;
+    }
+    .results-3 {
+      background-color: #FFC1BC;
+      border: solid 1px white;
+    }
+    .results-3:hover {
+      border: 1px solid #868586;
+      border-radius: 3px;
     }
 
-    sup {
-      font-weight: 100;
-      font-size: large;
-      vertical-align: top;
+    .tooltip {
+      visibility: hidden;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      white-space: nowrap;
+    }
+    .results-1:hover .tooltip, .results-2:hover .tooltip, .results-3:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+    .legend-item:last-child {
+      margin-right: 0;
+    }
+    .legend-color {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+      border: 1px solid #777;
+      border-radius: 2px;
+    }
+    .legend-color-1 {
+      background-color: #C1E6D5;
+    }
+    .legend-color-2 {
+      background-color: #C2CDF0;
+    }
+    .legend-color-3 {
+      background-color: #FFC1BC;
+    }
+
+    ul {
+      list-style-type: disc;
     }
   </style>
 </head>
@@ -215,112 +340,34 @@
 
       <!-- Content: Introduction -->
       <div class="content">
-        <span class="email-type center">Newsletter DevTeam <sup>(5)</sup></span><div class="ds"></div>
+        <span class="email-type center">Newsletter DevTeam</span>
+        <span class="sprint"></span>
+        <span class="sprint-date">17/10/2024</span><div class="ds"></div>
 
-        <span>En aquest arxiu trobaràs la recopil·lació completa de totes les "Newsletter DevTeam" enviades de SIG Games.</span>
+        <strong>Bona nit,</strong><div class="ds"></div>
+
+        <span>....</span><div class="ds"></div>
+        
+        <strong>SIG Games</strong>
       </div>
 
       <div class="divider"></div>
 
       <!-- Content -->
       <div class="content">
-        <span class="card-title">Newsletter 05</span>
-        <span class="card-subtitle">IndieDevDay (27/09/2024 - 28/09/2024)</span><div class="ds"></div>
+        <span class="card-title">[...]</span>
+        <span class="card-subtitle"><i>[...]</i> - <i>Daily Meeting</i> (02/10/2024)</span><div class="ds"></div>
 
-        <span><li>Resum dels punts clau de les xerrades i conferències.</li></span>
-        <span><li>Aprenentatge personal i conclusions de la fira.</li></span>
-        <span><li>Despeses d'empresa.</li></span>
-        <div class="ds"></div>
-
-        <span><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/05_newsletter-devteam.html" style="font-size: 13px;">Llegir més...</a></span>
+        <span>...</span>
       </div>
 
       <div class="divider"></div>
 
-      <!-- Content -->
+      <!-- More info content -->
       <div class="content">
-        <span class="card-title">Newsletter 04</span>
-        <span class="card-subtitle">Sprint 3 (30/09/2024)</span><div class="ds"></div>
-
-        <span><li>...</li></span>
-
-        <span><li>...</li></span><div class="ds"></div>
-
-        <span><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/04_newsletter-devteam.html" style="font-size: 13px;">Llegir més...</a></span>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Content -->
-      <div class="content">
-        <span class="card-title">Newsletter 03</span>
-        <span class="card-subtitle">Sprint 2 (31/08/2024)</span><div class="ds"></div>
-
-        <span><li>Enquesta per la decisió final del nom oficial de l'empresa: SIG Games.</li></span>
-
-        <span><li>Presentació, revisió i actualització de mecàniques del videojoc PacoMonkey.</li></span>
-
-        <span><li>Presentació i <i>feedback</i> de la identitat visual de l'empresa.</li></span>
-
-        <span><li>Presentació i <i>feedback</i> de la pàgina web de l'empresa.</li></span>
-
-        <span><li>Actualització de tasques i <i>retrospective</i> del Sprint 1, i planificació del Sprint 2.</li></span>
-
-        <span><li>Creació del repositori Resources i activació de webhooks a Discord.</li></span>
-
-        <span><li>Compra de software per pixel art: Aseprite.</li></span>
-
-        <span><li>Redefinició de la llicència del repositori: CC-BY-NC-ND.</li></span>
-
-        <span><li>Objectiu a curt termini: finalitzar la introducció/tutorial del videojoc en 3 mesos.</li></span>
-
-        <span><li>Creació de plantilles per correus oficials i documents d'empresa.</li></span><div class="ds"></div>
-
-        <span><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/03_newsletter-devteam.html" style="font-size: 13px;">Llegir més...</a></span>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Content -->
-      <div class="content">
-        <span class="card-title">Newsletter 02</span>
-        <span class="card-subtitle">Sprint 1 (27/07/2024)</span><div class="ds"></div>
-
-        <span>En aquesta <i>newsletter</i> es fa un resum de la reunió d'equip del 26 de juliol de 2024. Els temes inclouen:</span><div class="ds"></div>
-
-        <span><li>S'ha allargat la duració del sprint 1 de dues setmanes a 1 mes, movent la data de finalització del 23/07 al 06/08.</li></span>
-
-        <span><li>Tasques realitzades: creació identitat visual SIG Games, document "Project Blastoff", plantilla <i>pull requests</i> de GitHub.</li></span>
-
-        <span><li>Creació comptes de xarxes socials en Instagram, TikTok, Discord, GitHub i LinkedIn.</li></span>
-
-        <span><li>Reducció de la freqüència d'enviament de correus recordatori de tasques a 3 per setmana.</li></span><div class="ds"></div>
-
-        <span><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/02_newsletter-devteam.html" style="font-size: 13px;">Llegir més...</a></span>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Content -->
-      <div class="content">
-        <span class="card-title">Newsletter 01</span>
-        <span class="card-subtitle">Sprint 1 (14/07/2024)</span><div class="ds"></div>
-
-        <span>En aquesta <i>newsletter</i> es fa un resum de la reunió d'equip del 13 de juliol de 2024. Els temes inclouen:</span><div class="ds"></div>
-
-        <span><li>Implementació d'un nou estat "Bloquejada" al taulell Kanban per millorar la visibilitat de les tasques bloquejades.</li></span>
-
-        <span><li>Decisió sobre la llicència del projecte, a càrrec del departament de programació.</li></span>
-
-        <span><li>Possibilitat i dificultats d'exportar el videojoc a dispositius mòbils.</li></span>
-
-        <span><li>Recordatori de l'ús d'eines per registrar el temps de treball a Jira.</li></span>
-
-        <span><li>Desenvolupament de la identitat visual de SIG Games.</li></span>
-
-        <span><li>Assistència a la fira IndieDevDay 2024 i compra d'entrades.</li></span><div class="ds"></div>
-
-        <span><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/01_newsletter-devteam.html" style="font-size: 13px;">Llegir més...</a></span>
+        <span class="button-title">Per consultar newsletters anteriors</span><div class="ds"></div>
+        
+        <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SIGGames/Resources/main/Email%20Registry/newsletter-devteam/00_newsletter-devteam-compilation.html" title="Compilació newsletters SIG Games"><button>Clica aquí</button></a>
       </div>
 
       <!-- Footer -->
