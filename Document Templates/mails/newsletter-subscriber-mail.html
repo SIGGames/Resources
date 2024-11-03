@@ -245,8 +245,7 @@
       <!-- Content -->
       <div class="content" style="border: 1px solid #c5c5c5;">
         <span class="email-type center">Nova subscripció Newsletter</span>
-        
-        <div class="ds"></div>
+        <span class="sprint-date">{{date}}</span>
 
         <div class="row">
           <table width="100%" class="content-table" cellpadding="0" cellspacing="0" border="0">
@@ -255,7 +254,7 @@
               <td width="30%" class="column" style="padding-right: 5px; vertical-align: top;">
                 <table style="border-collapse: collapse; width: 100%;">
                   <tr><td><span class="box-name">Nom</span></td></tr>
-                  <tr><td><div class="data-box">Neus</div></td></tr>
+                  <tr><td><div class="data-box">{{firstName}}</div></td></tr>
                 </table>
               </td>
           
@@ -263,20 +262,7 @@
               <td width="50%" class="column" style="padding-left: 5px; vertical-align: top;">
                 <table style="border-collapse: collapse; width: 100%;">
                   <tr><td><span class="box-name">Cognoms</span></td></tr>
-                  <tr><td><div class="data-box">López Pasanau</span></div></td></tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </div><div class="ds"></div>
-
-        <div class="row">
-          <table width="100%" class="content-table" cellpadding="0" cellspacing="0" border="0">
-            <tr>
-              <td width="50%" class="column" style="padding-left: 5px; vertical-align: top;">
-                <table style="border-collapse: collapse; width: 100%;">
-                  <tr><td><span class="box-name">Email</span></td></tr>
-                  <tr><td><div class="data-box"><a class="mailto" href="mailto:julianolo71@gmail.com">neus71@msn.com</a></span></div></td></tr>
+                  <tr><td><div class="data-box">{{lastName}}</span></div></td></tr>
                 </table>
               </td>
             </tr>
@@ -290,15 +276,14 @@
               <td width="10%" class="column" style="padding-right: 5px; vertical-align: top;">
                 <table style="border-collapse: collapse; width: 100%;">
                   <tr><td><span class="box-name">ID Sub</span></td></tr>
-                  <tr><td><div class="data-box">0004</div></td></tr>
+                  <tr><td><div class="data-box">{{id-sub}}</div></td></tr>
                 </table>
               </td>
-          
-              <!-- Columna 2 -->
+
               <td width="50%" class="column" style="padding-left: 5px; vertical-align: top;">
                 <table style="border-collapse: collapse; width: 100%;">
-                  <tr><td><span class="box-name">Data Registre</span></td></tr>
-                  <tr><td><div class="data-box">01/11/2024 - 23:22h</span></div></td></tr>
+                  <tr><td><span class="box-name">Email</span></td></tr>
+                  <tr><td><div class="data-box"><a class="mailto">{{email}}</a></span></div></td></tr>
                 </table>
               </td>
             </tr>
@@ -311,7 +296,7 @@
       <!-- Response Message -->
       <div class="content">
         <span>
-          Actualment la newsletter té {<strong>num_subs</strong>} lectors. Per consultar la llista de subscriptors, pots fer-ho a través del següent <a href="#" target="_blank">enllaç</a>.
+          Per consultar el nombre total de subscriptors de la <i>newsletter</i>, juntament amb les seves dades, pots fer-ho a través del següent <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FSIGGames%2FResources%2Frefs%2Fheads%2Fmain%2FSIG%2520Games%2520WebPage%2Fnewsletter-subscribers-db.xlsm" target="_blank"><strong>enllaç</strong></a>.
         </span>
       </div>
 
