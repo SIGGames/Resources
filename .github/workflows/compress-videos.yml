@@ -17,16 +17,31 @@ jobs:
     - name: Install FFmpeg
       run: sudo apt-get install -y ffmpeg
 
-    - name: Compress Videos
+    - name: Determine Compression Scope
+      id: compression-scope
       run: |
-        find . -type f -name '*.mp4' | while read video; do
+        if [[ "${{ github.event_name }}" == "push" ]]; then
+          echo "Compressing only new or modified videos"
+          find . -type f -name '*.mp4' -not -path '*/Compressed/*' > files_to_compress.txt
+        else
+          echo "Manual trigger: Compressing all eligible videos"
+          find . -type f -name '*.mp4' -not -path '*/Compressed/*' > files_to_compress.txt
+        fi
+        echo "::set-output name=files_to_compress::$(cat files_to_compress.txt | xargs)"
+
+    - name: Compress Videos
+      if: steps.compression-scope.outputs.files_to_compress != ''
+      run: |
+        echo "Compressing videos: $(cat files_to_compress.txt)"
+        cat files_to_compress.txt | while read video; do
           base_dir=$(dirname "$video")
           compressed_dir="$base_dir/Compressed"
           mkdir -p "$compressed_dir"
           compressed_video="$compressed_dir/$(basename "$video")"
           
           if [ -f "$compressed_video" ]; then
-            echo "Compressed file already exists for $video. Overwriting."
+            echo "Compressed file already exists for $video. Skipping."
+            continue
           fi
 
           ffmpeg -y -i "$video" -vcodec libx264 -crf 28 "$compressed_video"
@@ -37,15 +52,8 @@ jobs:
           fi
         done
 
-    - name: Check for compressed files
-      run: |
-        if [[ -z $(find . -type f -name '*.mp4' -path '*/Compressed/*') ]]; then
-          echo "No compressed videos found. Exiting."
-          exit 1
-        fi
-
     - name: Commit compressed videos
-      if: success()
+      if: success() && steps['compression-scope'].outputs.files_to_compress != ''
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
