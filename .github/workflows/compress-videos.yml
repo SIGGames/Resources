@@ -23,7 +23,7 @@ jobs:
           base_dir=$(dirname "$video")
           compressed_dir="$base_dir/Compressed"
           mkdir -p "$compressed_dir"
-          compressed_video="$compressed_dir/$(basename $video)"
+          compressed_video="$compressed_dir/$(basename "$video")"
           
           if [ -f "$compressed_video" ]; then
             echo "Compressed file already exists for $video. Overwriting."
