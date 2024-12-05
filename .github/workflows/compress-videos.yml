@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - "**/*.mp4"
-      - "!**/*.mp4"
   workflow_dispatch:
 
 jobs:
