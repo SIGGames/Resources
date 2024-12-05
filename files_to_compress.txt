@@ -1,4 +1,5 @@
 ./Software/Videos/Health v2.mp4
 ./Software/Videos/Idle v1.mp4
 ./Software/Videos/Animations v1.mp4
+./Software/Videos/TilesetTest.mp4
 ./Software/Videos/Health v1.mp4
