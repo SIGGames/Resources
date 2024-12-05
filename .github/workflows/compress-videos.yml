@@ -1,4 +1,4 @@
-name: Compress Videos
+name: Compress and Upload Videos
 
 on:
   push:
@@ -13,29 +13,33 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
-
     - name: Install FFmpeg
       run: sudo apt-get install -y ffmpeg
 
     - name: Compress Videos
       run: |
         for video in $(git diff --name-only --diff-filter=A | grep '.mp4$'); do
-          echo "Processing $video"
           compressed_dir=$(dirname "$video")/Compressed
           mkdir -p "$compressed_dir"
           compressed_video="$compressed_dir/$(basename $video)"
-          ffmpeg -i "$video" -vcodec libx264 -crf 28 "$compressed_video"
-          echo "Compressed $video -> $compressed_video"
+          ffmpeg -y -i "$video" -vcodec libx264 -crf 28 "$compressed_video"
+          if [ ! -f "$compressed_video" ]; then
+            echo "Compression failed for $video. Exiting."
+            exit 1
+          fi
         done
 
     - name: Commit compressed videos
+      if: success()
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
         git add .
-        git commit -m "chore: compressed new videos"
+        git diff --cached --quiet || git commit -m "chore: compressed new videos"
         git push
+
+    - name: Upload compressed videos as artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: compressed-videos
+        path: '**/Compressed/*.mp4'
