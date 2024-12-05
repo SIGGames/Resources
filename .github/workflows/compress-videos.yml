@@ -30,30 +30,39 @@ jobs:
         echo "::set-output name=files_to_compress::$(cat files_to_compress.txt | xargs)"
 
     - name: Compress Videos
-      if: steps.compression-scope.outputs.files_to_compress != ''
       run: |
-        echo "Compressing videos: $(cat files_to_compress.txt)"
-        cat files_to_compress.txt | while read video; do
-          base_dir=$(dirname "$video")
-          compressed_dir="$base_dir/Compressed"
-          mkdir -p "$compressed_dir"
-          compressed_video="$compressed_dir/$(basename "$video")"
-          
-          if [ -f "$compressed_video" ]; then
-            echo "Compressed file already exists for $video. Skipping."
-            continue
-          fi
+        echo "Compressing videos: "
+        echo "$(cat files_to_compress.txt)"
+        echo "---------------------------------"
+        if [ -s files_to_compress.txt ]; then
+          cat files_to_compress.txt | while read video; do
+            if [ -f "$video" ]; then
+              base_dir=$(dirname "$video")
+              compressed_dir="$base_dir/Compressed"
+              mkdir -p "$compressed_dir"
+              compressed_video="$compressed_dir/$(basename "$video")"
+              
+              if [ -f "$compressed_video" ]; then
+                echo "Compressed file already exists for $video. Skipping."
+                continue
+              fi
 
-          ffmpeg -y -i "$video" -vcodec libx264 -crf 28 "$compressed_video"
+              ffmpeg -y -i "$video" -vcodec libx264 -crf 28 "$compressed_video"
 
-          if [ ! -f "$compressed_video" ]; then
-            echo "Compression failed for $video. Exiting."
-            exit 1
-          fi
-        done
+              if [ ! -f "$compressed_video" ]; then
+                echo "Compression failed for $video. Exiting."
+                exit 1
+              fi
+            else
+              echo "File $video does not exist. Skipping."
+            fi
+          done
+        else
+          echo "No files to compress. Skipping step."
+        fi
 
     - name: Commit compressed videos
-      if: success() && steps['compression-scope'].outputs.files_to_compress != ''
+      if: success()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
